@@ -1,7 +1,7 @@
 class WordsList {
-	constructor({ id, word, translate, status }) {
+	constructor({ id, english, translate, status }) {
 		this.id = id
-		this.word = word
+		this.english = english
 		this.translate = translate
 		this.status = status
 	}
@@ -12,7 +12,7 @@ class WordsList {
 		elem.dataset.id = this.id
 		elem.innerHTML = `
 		<div class="words__item-words">
-		<span class="text-md-bold">${this.word}</span> / <span class="text-md opacity">${this.translate}</span>
+		<span class="text-md-bold">${this.english}</span> / <span class="text-md opacity">${this.translate}</span>
 		</div>
 		<div class="words__item-block"><span class="words__item-status">${this.status}</span>
 		<button class="words__item-delete"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

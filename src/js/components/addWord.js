@@ -132,6 +132,8 @@ export default function initForm(formSelector) {
 						form.reset()
 						formState.english = ''
 						formState.translate = ''
+						englishTouched = false
+						translateTouched = false
 						formState.isValid = false
 						validateForm()
 					})

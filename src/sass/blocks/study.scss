@@ -1,0 +1,11 @@
+@use '../base/variables' as *;
+
+.study {
+  grid-template-columns: 1fr 0.3fr;
+  gap: 20px;
+
+  height: 100%;
+  &__main {
+    grid-column: 0 1;
+  }
+}

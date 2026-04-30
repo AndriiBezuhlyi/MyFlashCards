@@ -1,11 +1,22 @@
 @use '../base/variables' as *;
 
 .study {
-  grid-template-columns: 1fr 0.3fr;
-  gap: 20px;
-
   height: 100%;
-  &__main {
-    grid-column: 0 1;
-  }
+	&__first {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+	}
+	&__choose {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		&-list {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+		}
+	}
 }

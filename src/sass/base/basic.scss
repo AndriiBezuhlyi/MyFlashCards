@@ -61,7 +61,7 @@ body {
 	flex-shrink: 1;
 	gap: 20px;
 
-	max-width: 1280px;
+	max-width: 1024px;
 	height: 85vh;
 	margin: 8vh auto;
 	padding: 0 20px;
@@ -70,11 +70,12 @@ body {
 .main-content {
 	position: relative;
 
+	padding: 32px;
 	flex: 1;
 	min-width: 0;
+
 	background-color: $bg-panel;
 	border-radius: 24px;
-	padding: 32px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 

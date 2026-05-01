@@ -28,7 +28,24 @@
 	background-color: transparent;
 	border: 1px solid rgba($accent-pink, 0.5);
 
-	&-active, &:hover {
+	&-active,
+	&:hover {
+		background-color: rgba($accent-pink, 0.3);
+	}
+}
+
+.answer-btn {
+	padding: 25px 50px;
+	width: 175px;
+
+	color: $text-primary;
+	background-color: transparent;
+	border: 1px solid rgba($accent-pink, 0.5);
+	border-radius: 5px;
+
+	transition: all 0.25s ease;
+	&-active,
+	&:hover {
 		background-color: rgba($accent-pink, 0.3);
 	}
 }

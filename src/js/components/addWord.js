@@ -1,3 +1,5 @@
+/// додати: обмеження слів мінімум - 2 букви, максимум - 45 букв для англійської і для перекладу окремо 
+
 import { postData } from '../services/services'
 import initWordsList from './wordsList'
 
@@ -132,8 +134,8 @@ export default function initForm(formSelector) {
 						form.reset()
 						formState.english = ''
 						formState.translate = ''
-						englishTouched = false
-						translateTouched = false
+						formState.englishTouched = false
+						formState.translateTouched = false
 						formState.isValid = false
 						validateForm()
 					})

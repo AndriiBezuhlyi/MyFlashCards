@@ -1,3 +1,10 @@
+///// Що доробити потрібно:
+// - загальна кількість слів,
+// - фільтри по статусу,
+// - можливість вибирати багато слів для видалення,
+// - можливість редагувати слова,
+// - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
+
 class WordsList {
 	constructor({ id, english, translate, status }) {
 		this.id = id
@@ -81,6 +88,10 @@ async function initWordsList(parentSelector) {
 		console.error('Помилка завантаження слів:', error)
 	}
 	console.log('listener added')
+	initDelete()
+}
+
+function initDelete() {
 	parent.addEventListener('click', async e => {
 		const deleteBtn = e.target.closest('.words__item-delete')
 

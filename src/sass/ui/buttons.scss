@@ -11,7 +11,7 @@
 
 	transition: all 0.25s ease;
 	&:hover {
-		color: black;
+		color: $text-primary;
 		background-color: rgba($accent-pink, 0.3);
 	}
 	&:disabled {
@@ -35,8 +35,9 @@
 }
 
 .answer-btn {
-	padding: 25px 50px;
+	padding: 10px;
 	width: 175px;
+	height: 125px;
 
 	color: $text-primary;
 	background-color: transparent;

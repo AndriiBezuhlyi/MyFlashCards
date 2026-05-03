@@ -45,8 +45,13 @@
 	border-radius: 5px;
 
 	transition: all 0.25s ease;
-	&-active,
-	&:hover {
-		background-color: rgba($accent-pink, 0.3);
-	}
+}
+
+.study:not(.is-answered) .answer-btn:hover {
+	background-color: rgba($accent-pink, 0.3);
+	cursor: pointer;
+}
+
+.is-answered .answer-btn {
+	cursor: default;
 }

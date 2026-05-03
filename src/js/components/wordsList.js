@@ -14,6 +14,13 @@ class WordsList {
 	}
 
 	render() {
+		const deleteIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3 6H21" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M19 6L18.2 19C18.1523 19.8284 17.4635 20.5 16.634 20.5H7.36604C6.53652 20.5 5.84768 19.8284 5.8 19L5 6" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M10 11V17" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M14 11V17" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
+		</svg>`
 		const elem = document.createElement('li')
 		elem.classList.add('words__item')
 		elem.dataset.id = this.id
@@ -22,15 +29,7 @@ class WordsList {
 		<span class="text-md-bold">${this.english}</span> / <span class="text-md opacity">${this.translate}</span>
 		</div>
 		<div class="words__item-block"><span class="words__item-status">${this.status}</span>
-		<button class="words__item-delete"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M3 6H21" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6" 
-        stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M19 6L18.2 19C18.1523 19.8284 17.4635 20.5 16.634 20.5H7.36604C6.53652 20.5 5.84768 19.8284 5.8 19L5 6" 
-        stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M10 11V17" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M14 11V17" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-</svg></button></div>`
+		<button class="words__item-delete">${deleteIcon}</button></div>`
 
 		return elem
 	}

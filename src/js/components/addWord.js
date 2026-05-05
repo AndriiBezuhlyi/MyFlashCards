@@ -28,7 +28,7 @@ export default function initForm(formSelector) {
 		errorTranslate = document.getElementById('error-translate')
 
 	const engReg = /^[a-zA-Z\s-]+$/,
-		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ\s-]+$/
+		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ,\s-]+$/
 
 	if (!englishInput || !translateInput || !addButton) {
 		console.error('Не знайдено елементи форми! Перевір id в HTML')
@@ -85,12 +85,18 @@ export default function initForm(formSelector) {
 		formState.english = englishInput.value.trim()
 		validateForm()
 	})
-	translateInput.addEventListener('input', () => {
-		formState.translate = translateInput.value.trim()
-		validateForm()
-	})
 	englishInput.addEventListener('blur', () => {
 		formState.englishTouched = true
+		validateForm()
+	})
+	englishInput.addEventListener('keydown', e => {
+		if (e.key === 'Enter') {
+			e.preventDefault()
+			translateInput.focus()
+		}
+	})
+	translateInput.addEventListener('input', () => {
+		formState.translate = translateInput.value.trim()
 		validateForm()
 	})
 	translateInput.addEventListener('blur', () => {
@@ -117,6 +123,8 @@ export default function initForm(formSelector) {
 
 			const obj = Object.fromEntries(formData.entries())
 
+			obj.english = obj.english.trim()
+			obj.translate = obj.translate.trim()
 			obj.status = 'new'
 			obj.repetitions = 0
 
@@ -137,6 +145,7 @@ export default function initForm(formSelector) {
 					})
 					.finally(() => {
 						form.reset()
+						englishInput.focus()
 						formState.english = ''
 						formState.translate = ''
 						formState.englishTouched = false

@@ -53,7 +53,18 @@ html {
 }
 
 body {
-	background: url('../../../public/img/spaceBackgroundFour.png');
+	background:
+		radial-gradient(
+			circle at top left,
+			rgba(139, 127, 255, 0.18),
+			transparent 20%
+		),
+		radial-gradient(
+			circle at bottom right,
+			rgba(99, 230, 190, 0.12),
+			transparent 20%
+		),
+		$bg-main;
 }
 
 .app {
@@ -84,11 +95,20 @@ body {
 	min-height: 0;
 
 	padding: 14px 20px;
-	border-radius: 5px;
 
-	background-color: rgba($accent-pink, 0.15);
-	color: $accent-pink;
-	box-shadow: 0 0 0 2px rgba($accent-pink, 0.3);
+	color: $accent-purple;
+	background: $bg-panel;
+	border: 1px solid $border;
+	border-radius: 24px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+	transition:
+		transform 0.25s ease,
+		border-color 0.25s ease,
+		background 0.25s ease;
+
+	&:hover {
+		border-color: rgba(139, 127, 255, 0.25);
+	}
 }
 
 .overlay {

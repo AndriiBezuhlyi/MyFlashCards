@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uk">
+<html lang="uk" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -151,6 +151,9 @@
 					<ul class="words__list card">
 						<!-- <li class="words__item"></li> -->
 					</ul>
+					<div class="words__allWords card text-md">
+						All words: <span class='words__count'>0</span>
+					</div>
 					<div class="words__confirm-modal card">
 						<span class="words__confirm-text title-sm">Delete this words?</span>
 						<div class="words__confirm-btns">
@@ -246,7 +249,13 @@
 					</div> -->
 				</section>
 
-				<section id="settings" class="tab-content"></section>
+				<section id="settings" class="tab-content">
+					<div class="settings__main">
+						<button class="settings__toggleTheme button">
+							<span class="theme-icon">🌙</span>
+						</button>
+					</div>
+				</section>
 			</main>
 		</div>
 

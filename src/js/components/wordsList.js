@@ -28,7 +28,7 @@ class WordsList {
 		<div class="words__item-words">
 		<span class="text-md-bold">${this.english}</span> / <span class="text-md opacity">${this.translate}</span>
 		</div>
-		<div class="words__item-block"><span class="words__item-status">${this.status}</span>
+		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
 		<button class="words__item-delete">${deleteIcon}</button></div>`
 
 		return elem
@@ -68,8 +68,17 @@ function showConfirm() {
 	})
 }
 
+async function updateCount(data) {
+	const countWords = document.querySelector('.words__count')
+
+	if (countWords) {
+		countWords.innerHTML = data.length
+	}
+}
+
 async function initWordsList(parentSelector) {
 	const parent = document.querySelector(parentSelector)
+	const countWords = document.querySelector('.words__count')
 
 	if (!parent) return
 
@@ -78,6 +87,8 @@ async function initWordsList(parentSelector) {
 	try {
 		const response = await fetch('http://localhost:3000/words')
 		const data = await response.json()
+
+		updateCount(data)
 
 		data.forEach(word => {
 			const card = new WordsList(word)
@@ -88,6 +99,7 @@ async function initWordsList(parentSelector) {
 	}
 	console.log('listener added')
 	initDelete()
+	updateCount(data)
 }
 
 function initDelete() {
@@ -107,6 +119,10 @@ function initDelete() {
 				method: 'DELETE',
 			})
 			item.remove()
+
+			const response = await fetch('http://localhost:3000/words')
+			const data = await response.json()
+			updateCount(data)
 		} catch (error) {
 			console.error('Помилка видалення:', error)
 		}

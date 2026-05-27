@@ -17,6 +17,7 @@
 		overflow-y: auto;
 
 		padding: 20px 0;
+		border-radius: 4px;
 		&::-webkit-scrollbar {
 			width: 4px;
 		}
@@ -24,10 +25,10 @@
 			background: transparent;
 		}
 		&::-webkit-scrollbar-thumb {
-			background: rgba(255, 105, 180, 0.5); /* твій accent */
+			background: rgba($accent-mint, 0.3); /* твій accent */
 			border-radius: 5px;
 			&:hover {
-				background: rgba(255, 105, 180, 0.8);
+				background: rgba($accent-mint, 0.5);
 			}
 		}
 	}
@@ -36,7 +37,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 20px 20px;
-		border-bottom: 2px solid rgba($accent-pink, 0.3);
+		border-bottom: 2px solid rgba($accent-purple, 0.3);
 		width: 100%;
 		&-words {
 			display: flex;
@@ -48,8 +49,8 @@
 		}
 		&-status {
 			padding: 5px 10px;
-			background-color: rgba($accent-purple, 0.3);
-			color: $text-white;
+			background-color: rgba($accent-mint, 0.3);
+			color: $text-primary;
 			border-radius: 5px;
 		}
 		&-delete {
@@ -104,5 +105,12 @@
 				background-color: rgba(red, 0.5);
 			}
 		}
+	}
+	&__allWords {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__count {
+		color: $text-primary;
 	}
 }

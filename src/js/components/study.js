@@ -19,7 +19,7 @@
 
 // 10 - LocalStorage: Додай збереження "Рекорду" (Streak). Скільки правильних відповідей поспіль дав користувач. Навіть після закриття вкладки ці дані мають залишатися.
 
-// 11 - Звукові ефекти: Короткий приємний "дінь" при правильній відповіді та легка вібрація (якщо це мобільний) при помилці дуже сильно міняють відчуття від гри. 
+// 11 - Звукові ефекти: Короткий приємний "дінь" при правильній відповіді та легка вібрація (якщо це мобільний) при помилці дуже сильно міняють відчуття від гри.
 
 // 12 - Адаптивність (Mobile First): Переконайся, що grid або flex для кнопок відповідей не з'їжджає, якщо переклад слова буде дуже довгим.
 
@@ -127,7 +127,10 @@ export default function initStudy() {
 		isAnswered = false
 		parent.classList.remove('is-answered')
 		if (currentIndex >= questions.length) {
-			parent.innerHTML = 'Finished test'
+			parent.innerHTML = `
+			<div class="study__finish-screen">
+			<h2 class="title-md">You finished, good job!</h2>
+			<button class="button btn-restart">Restart test</button></div>`
 		} else {
 			renderQuestion()
 		}

@@ -1,20 +1,46 @@
-// Cosmic Pastel Palette
+$success: #63e6be;
+$warning: #f6d06f;
 
-$bg-main: rgba(14, 9, 28, 0.5); // основний темний фон
-$bg-panel: rgba(26, 20, 51, 0.7); // фон панелей і карток
-$bg-card: #221b44; // фон окремих карток
+$bg-main: var(--bg-main);
+$bg-panel: var(--bg-panel);
+$bg-card: var(--bg-card);
 
-$text-white: #fff; // білий текст
-$text-primary: #e0d9ff; // основний текст
-$text-secondary: #b8a8e0; // другорядний текст
-$text-muted: #8a7abf; // дуже приглушений
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-muted: var(--text-muted);
 
-$accent-purple: #c4a1ff; // основний пастельний фіолет
-$accent-blue: #a1e4ff; // пастельний блакитний
-$accent-pink: #ffb1e0; // пастельний рожевий
-$accent-pink-mute: #986282; // пастельний рожевий
-$accent-mint: #a1ffcc; // м’ятний
+$accent-purple: var(--accent-purple);
+$accent-blue: var(--accent-blue);
+$accent-mint: #63e6be;
 
-$success: #a1ffcc; // "Знаю"
-$warning: #ffe8a1; // "Hard"
-$border: #3a2e66; // межі
+$border: var(--border);
+
+:root {
+	--bg-main: #c3c3c3;
+	--bg-panel: #c3c3c3;
+	--bg-card: #c3c3c3;
+
+	--text-primary: #1e293b;
+	--text-secondary: #475569;
+	--text-muted: #94a3b8;
+
+	--accent-purple: #995699;
+	--accent-blue: #7dd3fc;
+
+	--border: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme='dark'] {
+	--bg-main: #0b1020;
+	--bg-panel: #131a2e;
+	--bg-card: #1b2440;
+
+	--text-primary: #f3f4f6;
+	--text-secondary: #b6bfd6;
+	--text-muted: #7f8aa3;
+
+	--accent-purple: #b6affc;
+	--accent-blue: #7dd3fc;
+
+	--border: rgba(255, 255, 255, 0.08);
+}

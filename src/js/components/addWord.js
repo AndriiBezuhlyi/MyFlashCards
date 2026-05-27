@@ -28,7 +28,7 @@ export default function initForm(formSelector) {
 		errorTranslate = document.getElementById('error-translate')
 
 	const engReg = /^[a-zA-Z\s-]+$/,
-		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ,\s-]+$/
+		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ,'\s-]+$/
 
 	if (!englishInput || !translateInput || !addButton) {
 		console.error('Не знайдено елементи форми! Перевір id в HTML')

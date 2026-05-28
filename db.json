@@ -1434,6 +1434,13 @@
       "status": "new",
       "repetitions": 0,
       "id": "e-Mfx7djVjU"
+    },
+    {
+      "english": "inception",
+      "translate": "започаткування",
+      "status": "new",
+      "repetitions": 0,
+      "id": "racqDRqyj6I"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -16,7 +16,7 @@
 		flex: 1;
 		overflow-y: auto;
 
-		padding: 20px 0;
+		padding: 20px 10px;
 		border-radius: 4px;
 		&::-webkit-scrollbar {
 			width: 4px;
@@ -37,7 +37,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 20px 20px;
-		border-bottom: 2px solid rgba($accent-purple, 0.3);
+		border-bottom: 2px solid rgba($accent-mint, 0.2);
 		width: 100%;
 		&-words {
 			display: flex;

@@ -25,10 +25,10 @@
 			background: transparent;
 		}
 		&::-webkit-scrollbar-thumb {
-			background: rgba($accent-mint, 0.3); /* твій accent */
+			background: var(--accent-mint-30);
 			border-radius: 5px;
 			&:hover {
-				background: rgba($accent-mint, 0.5);
+				background: var(--accent-mint-60);
 			}
 		}
 	}
@@ -37,7 +37,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 20px 20px;
-		border-bottom: 2px solid rgba($accent-mint, 0.2);
+		border-bottom: 2px solid var(--accent-mint-30);
 		width: 100%;
 		&-words {
 			display: flex;
@@ -49,8 +49,8 @@
 		}
 		&-status {
 			padding: 5px 10px;
-			background-color: rgba($accent-mint, 0.3);
-			color: $text-primary;
+			background-color: var(--accent-mint);
+			color: var(--text-primary);
 			border-radius: 5px;
 		}
 		&-delete {
@@ -79,7 +79,7 @@
 			top: calc(50% - 109px);
 			z-index: 1001;
 
-			padding: 70px 20px;
+			padding: 40px 50px;
 			width: fit-content;
 
 			display: none;
@@ -89,9 +89,13 @@
 			justify-content: center;
 			gap: 15px;
 		}
+		&-btns {
+			display: flex;
+			gap: 30px;
+		}
 		&-yes {
 			cursor: pointer;
-			color: $text-primary;
+			color: var(--text-primary);
 			&:hover {
 				color: inherit;
 				background-color: rgba(green, 0.5);
@@ -99,7 +103,7 @@
 		}
 		&-no {
 			cursor: pointer;
-			color: $text-primary;
+			color: var(--text-primary);
 			&:hover {
 				color: inherit;
 				background-color: rgba(red, 0.5);
@@ -111,6 +115,12 @@
 		justify-content: space-between;
 	}
 	&__count {
-		color: $text-primary;
+		color: var(--text-primary);
+	}
+	&__info {
+		display: flex;
+		justify-content: center;
+		
+		padding: 20px;
 	}
 }

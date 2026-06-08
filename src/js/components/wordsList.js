@@ -15,11 +15,11 @@ class WordsList {
 
 	render() {
 		const deleteIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M3 6H21" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-		<path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-		<path d="M19 6L18.2 19C18.1523 19.8284 17.4635 20.5 16.634 20.5H7.36604C6.53652 20.5 5.84768 19.8284 5.8 19L5 6" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-		<path d="M10 11V17" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
-		<path d="M14 11V17" stroke="#E8A0A8" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M3 6H21" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M19 6L18.2 19C18.1523 19.8284 17.4635 20.5 16.634 20.5H7.36604C6.53652 20.5 5.84768 19.8284 5.8 19L5 6" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M10 11V17" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
+		<path d="M14 11V17" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
 		</svg>`
 		const elem = document.createElement('li')
 		elem.classList.add('words__item')
@@ -79,6 +79,8 @@ async function updateCount(data) {
 async function initWordsList(parentSelector) {
 	const parent = document.querySelector(parentSelector)
 	const countWords = document.querySelector('.words__count')
+	const info = document.createElement('div')
+	info.classList.add('words__info')
 
 	if (!parent) return
 
@@ -87,6 +89,11 @@ async function initWordsList(parentSelector) {
 	try {
 		const response = await fetch('http://localhost:3000/words')
 		const data = await response.json()
+		if (data.length === 0) {
+			info.innerHTML = 'Щоб бачити слова в списку, спочатку додайте їх'
+			parent.appendChild(cta)
+			return
+		}
 
 		updateCount(data)
 
@@ -96,6 +103,8 @@ async function initWordsList(parentSelector) {
 		})
 	} catch (error) {
 		console.error('Помилка завантаження слів:', error)
+		info.innerHTML = 'Помилка завантаження слів'
+		parent.appendChild(info)
 	}
 	console.log('listener added')
 	initDelete()

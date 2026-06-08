@@ -28,7 +28,7 @@
 		padding: 15px;
 		width: 100%;
 
-		color: $text-primary;
+		color: var(--text-primary);
 		background-color: transparent;
 
 		border-radius: 10px;
@@ -46,7 +46,7 @@
 		padding: 5px 10px;
 		border-radius: 5px;
 
-		color: $text-primary;
+		color: var(--text-primary);
 		background-color: rgba(green, 0.5);
 	}
 }

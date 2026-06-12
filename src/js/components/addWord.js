@@ -5,7 +5,7 @@
 // 4 - Throttle / Debounce: Якщо ти захочеш додати перевірку "чи є таке слово вже в базі" через fetch під час введення, обов'язково використовуй debounce. Це вбереже твій сервер від 10 запитів на секунду, поки юзер друкує слово
 // 5 - Архітектурна "фішка": Об'єкт помилок. Зараз у тебе багато if. Коли перевірок стане більше (наприклад, заборона цифр, спецсимволів тощо), код стане важко читати. Порада: Створи об'єкт зі схемами валідації. Це зробить функцію validateForm набагато чистішою.
 
-import { postData } from '../services/services'
+import { lowerTrim, postData } from '../services/services'
 import initWordsList from './wordsList'
 
 export default function initForm(formSelector) {
@@ -44,8 +44,8 @@ export default function initForm(formSelector) {
 	}
 
 	function validateForm() {
-		formState.english = englishInput.value.trim()
-		formState.translate = translateInput.value.trim()
+		formState.english = lowerTrim(englishInput.value)
+		formState.translate = lowerTrim(translateInput.value)
 
 		errorEnglish.textContent = ''
 		errorTranslate.textContent = ''
@@ -82,7 +82,7 @@ export default function initForm(formSelector) {
 	}
 
 	englishInput.addEventListener('input', () => {
-		formState.english = englishInput.value.trim()
+		formState.english = lowerTrim(englishInput.value)
 		validateForm()
 	})
 	englishInput.addEventListener('blur', () => {
@@ -96,7 +96,7 @@ export default function initForm(formSelector) {
 		}
 	})
 	translateInput.addEventListener('input', () => {
-		formState.translate = translateInput.value.trim()
+		formState.translate = lowerTrim(translateInput.value)
 		validateForm()
 	})
 	translateInput.addEventListener('blur', () => {
@@ -123,8 +123,8 @@ export default function initForm(formSelector) {
 
 			const obj = Object.fromEntries(formData.entries())
 
-			obj.english = obj.english.trim()
-			obj.translate = obj.translate.trim()
+			obj.english = lowerTrim(obj.english)
+			obj.translate = lowerTrim(obj.translate)
 			obj.status = 'new'
 			obj.repetitions = 0
 

@@ -18,3 +18,7 @@ export const getResources = async url => {
 
 	return await res.json()
 }
+
+export function lowerTrim(value) {
+	return value.toLowerCase().trim()
+}

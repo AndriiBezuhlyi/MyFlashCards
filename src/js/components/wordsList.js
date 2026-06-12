@@ -1,3 +1,4 @@
+import { lowerTrim } from '../services/services'
 ///// Що доробити потрібно:
 // - загальна кількість слів,
 // - фільтри по статусу,
@@ -5,6 +6,8 @@
 // - можливість редагувати слова,
 // - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
 
+
+/// ЯКЩО ПІД ЧАС ПОШУКУ ВИДАЛЯТИ ТО БАГУЄТЬСЯ І НЕ ПРОПАДАЄ З ЗАГАЛЬНОГО СПИСКУ
 class WordsList {
 	constructor({ id, english, translate, status }) {
 		this.id = id
@@ -77,41 +80,81 @@ async function updateCount(data) {
 }
 
 async function initWordsList(parentSelector) {
-	const parent = document.querySelector(parentSelector)
-	const countWords = document.querySelector('.words__count')
+	const parent = document.querySelector(parentSelector),
+		countWords = document.querySelector('.words__count'),
+		searchInput = document.querySelector('.words__input')
+
 	const info = document.createElement('div')
 	info.classList.add('words__info')
 
 	if (!parent) return
 
-	parent.innerHTML = ''
-
-	try {
-		const response = await fetch('http://localhost:3000/words')
-		const data = await response.json()
-		if (data.length === 0) {
+	function renderWords(data) {
+		console.log('Update')
+		parent.innerHTML = ''
+		if (!data.length) {
 			info.innerHTML = 'Щоб бачити слова в списку, спочатку додайте їх'
-			parent.appendChild(cta)
+			parent.appendChild(info)
 			return
 		}
-
 		updateCount(data)
 
 		data.forEach(word => {
 			const card = new WordsList(word)
 			parent.appendChild(card.render())
 		})
+	}
+
+	let data = []
+
+	try {
+		const response = await fetch('http://localhost:3000/words')
+
+		if (!response.ok) {
+			throw new Error('HTTP error')
+		}
+
+		data = await response.json()
 	} catch (error) {
-		console.error('Помилка завантаження слів:', error)
+		console.error('Fetch error:', error)
+
+		parent.innerHTML = ''
 		info.innerHTML = 'Помилка завантаження слів'
 		parent.appendChild(info)
-	}
-	console.log('listener added')
-	initDelete()
-	updateCount(data)
-}
 
-function initDelete() {
+		return
+	}
+
+	let ltData = data.map(item => ({
+		...item,
+		english: lowerTrim(item.english),
+		translate: lowerTrim(item.translate),
+	}))
+	renderWords(ltData)
+
+	searchInput.addEventListener('input', () => {
+		const searchTerm = lowerTrim(searchInput.value)
+		const filteredData = ltData.filter(item => {
+			const eng = item.english,
+				ukr = item.translate
+
+			return eng.includes(searchTerm) || ukr.includes(searchTerm)
+		})
+		if (filteredData.length === 0 && searchTerm !== '') {
+			parent.innerHTML = ''
+			info.innerHTML = 'Таких слів не знайдено'
+			parent.appendChild(info)
+			return
+		}
+		if (searchTerm === '') {
+			parent.innerHTML = ''
+			renderWords(ltData)
+			return
+		}
+		parent.innerHTML = ''
+		renderWords(filteredData)
+	})
+
 	parent.addEventListener('click', async e => {
 		const deleteBtn = e.target.closest('.words__item-delete')
 
@@ -120,22 +163,29 @@ function initDelete() {
 		const item = deleteBtn.closest('.words__item')
 		const id = item.dataset.id
 
+		if (deleteBtn.dataset.locked) return
+		deleteBtn.dataset.locked = 'true'
+
 		const confirmed = await showConfirm()
 		if (!confirmed) return
 
 		try {
-			await fetch(`http://localhost:3000/words/${id}`, {
+			const response = await fetch(`http://localhost:3000/words/${id}`, {
 				method: 'DELETE',
 			})
-			item.remove()
+			if (!response.ok) {
+				throw new Error('Delete failed')
+			}
 
-			const response = await fetch('http://localhost:3000/words')
-			const data = await response.json()
-			updateCount(data)
+			ltData = ltData.filter(item => item.id !== id)
+			renderWords(ltData)
+			updateCount(ltData)
 		} catch (error) {
 			console.error('Помилка видалення:', error)
 		}
 	})
+
+	updateCount(ltData)
 }
 
 export default initWordsList

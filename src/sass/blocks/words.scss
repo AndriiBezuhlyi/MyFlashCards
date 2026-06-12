@@ -49,8 +49,8 @@
 		}
 		&-status {
 			padding: 5px 10px;
-			background-color: var(--accent-mint);
-			color: var(--text-primary);
+			background-color: var(--accent-mint-60);
+			color: var(--bg-panel);
 			border-radius: 5px;
 		}
 		&-delete {
@@ -72,6 +72,9 @@
 	}
 	&__input {
 		border: none;
+		&:focus {
+			outline: none;
+		}
 	}
 	&__confirm {
 		&-modal {
@@ -120,7 +123,7 @@
 	&__info {
 		display: flex;
 		justify-content: center;
-		
+
 		padding: 20px;
 	}
 }

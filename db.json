@@ -1441,6 +1441,125 @@
       "status": "new",
       "repetitions": 0,
       "id": "racqDRqyj6I"
+    },
+    {
+      "english": "fascinates",
+      "translate": "захоплює",
+      "status": "new",
+      "repetitions": 0,
+      "id": "sp1JuufoViE"
+    },
+    {
+      "english": "perspective",
+      "translate": "точка зору",
+      "status": "new",
+      "repetitions": 0,
+      "id": "0pqvli2pFlU"
+    },
+    {
+      "english": "coincidence",
+      "translate": "збіг",
+      "status": "new",
+      "repetitions": 0,
+      "id": "EjMmnuzIGt0"
+    },
+    {
+      "english": "assumption",
+      "translate": "припущення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "N-hzcEzWwVM"
+    },
+    {
+      "english": "influence",
+      "translate": "вплив",
+      "status": "new",
+      "repetitions": 0,
+      "id": "eE6T0wHvqPg"
+    },
+    {
+      "english": "mindset",
+      "translate": "спосіб мислення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "qM6ZgTlamF8"
+    },
+    {
+      "english": "prioritize",
+      "translate": "визначати пріоритети",
+      "status": "new",
+      "repetitions": 0,
+      "id": "vshC6_uI0Xs"
+    },
+    {
+      "english": "overcome",
+      "translate": "долати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "-GmhCK6Ji7I"
+    },
+    {
+      "english": "challenge",
+      "translate": "виклик",
+      "status": "new",
+      "repetitions": 0,
+      "id": "uovbuEAkeso"
+    },
+    {
+      "english": "achievement",
+      "translate": "досягнення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_HjG_ybFakA"
+    },
+    {
+      "english": "self-awareness",
+      "translate": "самосвідомість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "61y3C9xBJ6w"
+    },
+    {
+      "english": "bizarre",
+      "translate": "дивний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zQaG15v_pGA"
+    },
+    {
+      "english": "hilarious",
+      "translate": "дуже смішний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "hzZ_yhmP5A4"
+    },
+    {
+      "english": "ancient",
+      "translate": "стародавній",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3vOgTmRj3LI"
+    },
+    {
+      "english": "ordinary",
+      "translate": "звичайний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "E09IvkqKQ7A"
+    },
+    {
+      "english": "creature",
+      "translate": "істота",
+      "status": "new",
+      "repetitions": 0,
+      "id": "PWzNv9YcFyA"
+    },
+    {
+      "english": "phenomenon",
+      "translate": "явище",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_3C-06wkI_Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

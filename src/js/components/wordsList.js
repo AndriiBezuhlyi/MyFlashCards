@@ -6,7 +6,6 @@ import { lowerTrim } from '../services/services'
 // - можливість редагувати слова,
 // - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
 
-
 /// ЯКЩО ПІД ЧАС ПОШУКУ ВИДАЛЯТИ ТО БАГУЄТЬСЯ І НЕ ПРОПАДАЄ З ЗАГАЛЬНОГО СПИСКУ
 class WordsList {
 	constructor({ id, english, translate, status }) {
@@ -63,6 +62,7 @@ function showConfirm() {
 			modal.style.display = 'none'
 			yesBtn.removeEventListener('click', onYes)
 			noBtn.removeEventListener('click', onNo)
+			overlay.removeEventListener('click', onNo)
 		}
 
 		yesBtn.addEventListener('click', onYes)
@@ -71,7 +71,7 @@ function showConfirm() {
 	})
 }
 
-async function updateCount(data) {
+function updateCount(data) {
 	const countWords = document.querySelector('.words__count')
 
 	if (countWords) {
@@ -81,7 +81,6 @@ async function updateCount(data) {
 
 async function initWordsList(parentSelector) {
 	const parent = document.querySelector(parentSelector),
-		countWords = document.querySelector('.words__count'),
 		searchInput = document.querySelector('.words__input')
 
 	const info = document.createElement('div')
@@ -97,12 +96,25 @@ async function initWordsList(parentSelector) {
 			parent.appendChild(info)
 			return
 		}
-		updateCount(data)
 
 		data.forEach(word => {
 			const card = new WordsList(word)
 			parent.appendChild(card.render())
 		})
+	}
+
+	function render() {
+		const filtered = getFiltered(words)
+
+		if (filtered.length === 0 && searchInput.value !== '') {
+			parent.innerHTML = ''
+			info.innerHTML = 'Таких слів не знайдено'
+			parent.appendChild(info)
+			return
+		}
+
+		renderWords(filtered)
+		updateCount(filtered)
 	}
 
 	let data = []
@@ -125,35 +137,20 @@ async function initWordsList(parentSelector) {
 		return
 	}
 
-	let ltData = data.map(item => ({
-		...item,
-		english: lowerTrim(item.english),
-		translate: lowerTrim(item.translate),
-	}))
-	renderWords(ltData)
+	let words = data
+	renderWords(words)
 
-	searchInput.addEventListener('input', () => {
+	function getFiltered(list) {
 		const searchTerm = lowerTrim(searchInput.value)
-		const filteredData = ltData.filter(item => {
-			const eng = item.english,
-				ukr = item.translate
 
-			return eng.includes(searchTerm) || ukr.includes(searchTerm)
-		})
-		if (filteredData.length === 0 && searchTerm !== '') {
-			parent.innerHTML = ''
-			info.innerHTML = 'Таких слів не знайдено'
-			parent.appendChild(info)
-			return
-		}
-		if (searchTerm === '') {
-			parent.innerHTML = ''
-			renderWords(ltData)
-			return
-		}
-		parent.innerHTML = ''
-		renderWords(filteredData)
-	})
+		return list.filter(
+			item =>
+				item.english.includes(searchTerm) ||
+				item.translate.includes(searchTerm),
+		)
+	}
+
+	searchInput.addEventListener('input', render)
 
 	parent.addEventListener('click', async e => {
 		const deleteBtn = e.target.closest('.words__item-delete')
@@ -162,9 +159,6 @@ async function initWordsList(parentSelector) {
 
 		const item = deleteBtn.closest('.words__item')
 		const id = item.dataset.id
-
-		if (deleteBtn.dataset.locked) return
-		deleteBtn.dataset.locked = 'true'
 
 		const confirmed = await showConfirm()
 		if (!confirmed) return
@@ -177,15 +171,15 @@ async function initWordsList(parentSelector) {
 				throw new Error('Delete failed')
 			}
 
-			ltData = ltData.filter(item => item.id !== id)
-			renderWords(ltData)
-			updateCount(ltData)
+			words = words.filter(item => item.id !== id)
+
+			render()
 		} catch (error) {
 			console.error('Помилка видалення:', error)
 		}
 	})
 
-	updateCount(ltData)
+	updateCount(getFiltered(words))
 }
 
 export default initWordsList

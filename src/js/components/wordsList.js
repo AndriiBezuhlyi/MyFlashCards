@@ -1,12 +1,10 @@
 import { lowerTrim } from '../services/services'
+import wordsStore from '../store/wordsStore'
 ///// Що доробити потрібно:
-// - загальна кількість слів,
 // - фільтри по статусу,
 // - можливість вибирати багато слів для видалення,
 // - можливість редагувати слова,
 // - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
-
-/// ЯКЩО ПІД ЧАС ПОШУКУ ВИДАЛЯТИ ТО БАГУЄТЬСЯ І НЕ ПРОПАДАЄ З ЗАГАЛЬНОГО СПИСКУ
 class WordsList {
 	constructor({ id, english, translate, status }) {
 		this.id = id
@@ -26,9 +24,14 @@ class WordsList {
 		const elem = document.createElement('li')
 		elem.classList.add('words__item')
 		elem.dataset.id = this.id
+		const eng =
+			this.english.charAt(0).toUpperCase() + this.english.slice(1).toLowerCase()
+		const ukr =
+			this.translate.charAt(0).toUpperCase() +
+			this.translate.slice(1).toLowerCase()
 		elem.innerHTML = `
 		<div class="words__item-words">
-		<span class="text-md-bold">${this.english}</span> / <span class="text-md opacity">${this.translate}</span>
+		<span class="text-md-bold">${eng}</span> / <span class="text-md opacity">${ukr}</span>
 		</div>
 		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
 		<button class="words__item-delete">${deleteIcon}</button></div>`
@@ -80,17 +83,19 @@ function updateCount(data) {
 }
 
 async function initWordsList(parentSelector) {
-	const parent = document.querySelector(parentSelector),
-		searchInput = document.querySelector('.words__input')
+	const parent = document.querySelector(parentSelector)
+	const searchInput = document.querySelector('.words__input')
 
 	const info = document.createElement('div')
 	info.classList.add('words__info')
 
 	if (!parent) return
 
+	let words = []
+
 	function renderWords(data) {
-		console.log('Update')
 		parent.innerHTML = ''
+
 		if (!data.length) {
 			info.innerHTML = 'Щоб бачити слова в списку, спочатку додайте їх'
 			parent.appendChild(info)
@@ -103,44 +108,9 @@ async function initWordsList(parentSelector) {
 		})
 	}
 
-	function render() {
-		const filtered = getFiltered(words)
-
-		if (filtered.length === 0 && searchInput.value !== '') {
-			parent.innerHTML = ''
-			info.innerHTML = 'Таких слів не знайдено'
-			parent.appendChild(info)
-			return
-		}
-
-		renderWords(filtered)
-		updateCount(filtered)
-	}
-
-	let data = []
-
-	try {
-		const response = await fetch('http://localhost:3000/words')
-
-		if (!response.ok) {
-			throw new Error('HTTP error')
-		}
-
-		data = await response.json()
-	} catch (error) {
-		console.error('Fetch error:', error)
-
-		parent.innerHTML = ''
-		info.innerHTML = 'Помилка завантаження слів'
-		parent.appendChild(info)
-
-		return
-	}
-
-	let words = data
-	renderWords(words)
-
 	function getFiltered(list) {
+		if (!searchInput) return list
+
 		const searchTerm = lowerTrim(searchInput.value)
 
 		return list.filter(
@@ -150,9 +120,22 @@ async function initWordsList(parentSelector) {
 		)
 	}
 
-	searchInput.addEventListener('input', render)
+	function render() {
+		const filtered = getFiltered(words)
 
-	parent.addEventListener('click', async e => {
+		if (filtered.length === 0 && searchInput && searchInput.value !== '') {
+			parent.innerHTML = ''
+			info.innerHTML = 'Таких слів не знайдено'
+			parent.appendChild(info)
+			updateCount(filtered)
+			return
+		}
+
+		renderWords(filtered)
+		updateCount(filtered)
+	}
+
+	async function deleteWord(e) {
 		const deleteBtn = e.target.closest('.words__item-delete')
 
 		if (!deleteBtn) return
@@ -164,22 +147,33 @@ async function initWordsList(parentSelector) {
 		if (!confirmed) return
 
 		try {
-			const response = await fetch(`http://localhost:3000/words/${id}`, {
-				method: 'DELETE',
-			})
-			if (!response.ok) {
-				throw new Error('Delete failed')
-			}
-
-			words = words.filter(item => item.id !== id)
-
-			render()
+			await wordsStore.deleteWord(id)
 		} catch (error) {
 			console.error('Помилка видалення:', error)
 		}
-	})
+	}
 
-	updateCount(getFiltered(words))
+	wordsStore
+		.subscribe(newWords => {
+			words = newWords
+			render()
+		})
+
+	if (searchInput) {
+		searchInput.addEventListener('input', render)
+	}
+
+	parent.addEventListener('click', deleteWord)
+
+	try {
+		await wordsStore.loadWords()
+	} catch (error) {
+		console.error('Fetch error:', error)
+
+		parent.innerHTML = ''
+		info.innerHTML = 'Помилка завантаження слів'
+		parent.appendChild(info)
+	}
 }
 
 export default initWordsList

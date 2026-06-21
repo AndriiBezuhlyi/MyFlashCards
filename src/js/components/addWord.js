@@ -1,12 +1,10 @@
 /// додати:
 // 1 - обмеження слів мінімум - 2 букви, максимум - 45 букв для англійської і для перекладу окремо
-// 2 - Trim при сабміті: Ти вже робиш .trim() у валідації, але переконайся, що в об'єкт obj, який іде на сервер, потрапляють саме обрізані дані. Іноді люди випадково ставлять пробіл в кінці, і це псує сортування в базі
-// 3 - Автоматичне виправлення (Auto-correction): Можна додати автоматичне перетворення першої літери на велику (Capitalize) або просто приводити все до нижнього регістру (toLowerCase()), щоб у списку слів не було "Apple", "apple" і "APPLE" як три різні записи
 // 4 - Throttle / Debounce: Якщо ти захочеш додати перевірку "чи є таке слово вже в базі" через fetch під час введення, обов'язково використовуй debounce. Це вбереже твій сервер від 10 запитів на секунду, поки юзер друкує слово
 // 5 - Архітектурна "фішка": Об'єкт помилок. Зараз у тебе багато if. Коли перевірок стане більше (наприклад, заборона цифр, спецсимволів тощо), код стане важко читати. Порада: Створи об'єкт зі схемами валідації. Це зробить функцію validateForm набагато чистішою.
 
 import { lowerTrim, postData } from '../services/services'
-import initWordsList from './wordsList'
+import wordsStore from '../store/wordsStore'
 
 export default function initForm(formSelector) {
 	const forms = document.querySelectorAll(formSelector)
@@ -133,24 +131,28 @@ export default function initForm(formSelector) {
 			formState.englishTouched = true
 			formState.translateTouched = true
 			if (formState.isValid) {
-				postData('http://localhost:3000/words', json)
+				wordsStore
+					.addWord(obj)
 					.then(data => {
-						initWordsList('.words__list')
 						console.log(data)
 						statusMessage.remove()
 						showMessage(message.success)
 					})
 					.catch(error => {
+						statusMessage.remove()
 						showMessage(message.failure)
+						console.error(error)
 					})
 					.finally(() => {
 						form.reset()
 						englishInput.focus()
+
 						formState.english = ''
 						formState.translate = ''
 						formState.englishTouched = false
 						formState.translateTouched = false
 						formState.isValid = false
+
 						validateForm()
 					})
 			}

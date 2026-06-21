@@ -4,8 +4,12 @@ export const postData = async (url, data) => {
 		headers: {
 			'Content-type': 'application/json',
 		},
-		body: data,
+		body: JSON.stringify(data),
 	})
+
+	if (!res.ok) {
+		throw new Error(`Could not post ${url}, status: ${res.status}`)
+	}
 	return await res.json()
 }
 

@@ -41,6 +41,7 @@
 		width: 100%;
 		&-words {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 10px;
 		}
 		&-block {

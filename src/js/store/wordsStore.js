@@ -6,7 +6,6 @@ let subscribers = []
 function notify() {
 	subscribers.forEach(callback => callback(words))
 }
-
 const wordsStore = {
 	getWords() {
 		return words

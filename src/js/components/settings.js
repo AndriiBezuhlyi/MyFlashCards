@@ -18,10 +18,13 @@ export default function initSettings() {
 	}
 
 	const updateButtonText = theme => {
-		toggleBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙'
+		toggleBtn.innerHTML = theme === 'dark' ? 'Light theme ☀️' : 'Dark theme 🌙'
 	}
 
 	const savedTheme = localStorage.getItem('theme')
+	savedTheme === 'dark'
+		? (toggleBtn.innerHTML = 'Light theme ☀️')
+		: (toggleBtn.innerHTML = 'Dark theme 🌙')
 
 	if (savedTheme) {
 		document.documentElement.setAttribute('data-theme', savedTheme)

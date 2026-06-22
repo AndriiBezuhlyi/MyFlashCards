@@ -44,12 +44,30 @@
 			gap: 10px;
 		}
 	}
-	&__finish-screen {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 30px;
+	&__warning {
+		position: absolute;
+		left: calc(50% - (384px / 2));
+
+		width: fit-content;
+		padding: 25px;
+
+		color: rgb(157, 0, 0);
+		border: 1px solid $border;
+		border-radius: 25px;
+	}
+	&__finish {
+		&-screen {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 30px;
+		}
+		&-actions {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
 	}
 }
 

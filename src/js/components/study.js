@@ -22,38 +22,68 @@
 // 11 - Звукові ефекти: Короткий приємний "дінь" при правильній відповіді та легка вібрація (якщо це мобільний) при помилці дуже сильно міняють відчуття від гри.
 
 // 12 - Адаптивність (Mobile First): Переконайся, що grid або flex для кнопок відповідей не з'їжджає, якщо переклад слова буде дуже довгим.
+import wordsStore from '../store/wordsStore'
 
 export default function initStudy() {
-	const content = document.querySelector('.study__choice'),
-		btns = document.querySelectorAll('.choose')
+	const parent = document.querySelector('.study')
+
+	const initialScreenHTML = parent.innerHTML
+
+	const warning = document.createElement('div')
+	warning.classList.add('study__warning')
+	warning.classList.add('card')
+	warning.innerHTML = `Недостатньо слів для вивчення,</br> додайте слова або виберіть меншу кількість`
 
 	let quantity = 25
 
-	btns.forEach(item => {
-		item.addEventListener('click', e => {
-			btns.forEach(item => item.classList.remove('choose-active'))
-
-			e.currentTarget.classList.add('choose-active')
-
-			quantity = e.currentTarget.dataset.quantity
-
-			if (quantity) {
-				content.innerHTML = quantity
-			}
-		})
-	})
-
-	const btnStart = document.querySelector('.study__btn'),
-		parent = document.querySelector('.study')
-
 	let questions = [],
-		currentIndex = 0
+		currentIndex = 0,
+		correctAnswers = 0
+
+	function bindStartScreenEvents() {
+		const content = document.querySelector('.study__choice'),
+			btns = document.querySelectorAll('.choose'),
+			btnStart = document.querySelector('.study__btn')
+
+		btns.forEach(item => {
+			item.addEventListener('click', e => {
+				btns.forEach(item => item.classList.remove('choose-active'))
+
+				e.currentTarget.classList.add('choose-active')
+
+				quantity = e.currentTarget.dataset.quantity
+				quantity = Number(quantity)
+
+				if (quantity) {
+					content.innerHTML = quantity
+				}
+			})
+		})
+
+		if (btnStart) {
+			btnStart.addEventListener('click', launchTest)
+		}
+	}
+
+	bindStartScreenEvents()
 
 	async function startStudySession(count) {
-		const response = await fetch('http://localhost:3000/words')
-		if (!response.ok) return
-
-		const data = await response.json()
+		const parent = document.querySelector('.study__choose')
+		let data = wordsStore.getWords()
+		if (data.length === 0) {
+			await wordsStore.loadWords()
+			data = wordsStore.getWords()
+		}
+		if (!data) {
+			return
+		}
+		if (data.length < quantity && data.length > 3) {
+			parent.append(warning)
+			setTimeout(() => {
+				warning.remove()
+			}, 3000)
+			return
+		}
 		const shuffled = [...data]
 		shuffle(shuffled)
 
@@ -62,9 +92,28 @@ export default function initStudy() {
 
 	let isAnswered = false
 
-	parent.addEventListener('click', e => {
+	parent.addEventListener('click', async e => {
 		let selectedAnswer = e.target.closest('.answer-btn'),
 			answersList = document.querySelectorAll('.answer-btn')
+
+		const btnNextTest = e.target.closest('.btn-next-test'),
+			btnFirstScreen = e.target.closest('.btn-back-first')
+
+		if (btnNextTest) {
+			await launchTest()
+			return
+		}
+		if (btnFirstScreen) {
+			parent.innerHTML = initialScreenHTML
+
+			questions = []
+			currentIndex = 0
+			correctAnswers = 0
+			isAnswered = false
+
+			bindStartScreenEvents()
+		}
+
 		if (!selectedAnswer) return
 		if (isAnswered) return
 		isAnswered = true
@@ -73,6 +122,7 @@ export default function initStudy() {
 
 		if (selectedAnswer.textContent === questions[currentIndex].translate) {
 			selectedAnswer.classList.add('correct')
+			correctAnswers++
 			setTimeout(updateQuestion, 2500)
 			console.log(true)
 		} else {
@@ -122,25 +172,46 @@ export default function initStudy() {
 		return answers
 	}
 
+	function renderFinishScreen() {
+		parent.innerHTML = `
+			<div class="study__finish-screen">
+			<h2 class="title-md">Тест завершено!</h2>
+
+			<p class="text-md">
+						Правильних відповідей:
+							<span class="text-md-bold">${correctAnswers}</span> /
+							<span class="text-md-bold">${questions.length}</span>
+			</p>
+
+			<div class="study__finish-actions">
+						<button class="button btn-next-test">Розпочати наступний тест</button>
+						<button class="button btn-back-first">Повернутись на початковий екран</button>
+			</div>
+			</div>`
+	}
+
 	function updateQuestion() {
 		currentIndex++
 		isAnswered = false
 		parent.classList.remove('is-answered')
 		if (currentIndex >= questions.length) {
-			parent.innerHTML = `
-			<div class="study__finish-screen">
-			<h2 class="title-md">You finished, good job!</h2>
-			<button class="button btn-restart">Restart test</button></div>`
+			renderFinishScreen()
 		} else {
 			renderQuestion()
 		}
 	}
 
-	btnStart.addEventListener('click', async () => {
+	async function launchTest() {
 		const data = await startStudySession(quantity)
+
+		if (!data) return
+
+		correctAnswers = 0
 		currentIndex = 0
+		isAnswered = false
+
 		renderQuestion()
-	})
+	}
 }
 
 function shuffle(array) {

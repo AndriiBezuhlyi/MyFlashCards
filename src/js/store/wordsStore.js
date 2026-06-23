@@ -34,6 +34,23 @@ const wordsStore = {
 		return newWord
 	},
 
+	
+	async updateWord(id, updatedData) {
+		const updatedWord = await wordsApi.updateWord(id, updatedData)
+
+		words = words.map(word => {
+			if (String(word.id) === String(id)) {
+				return updatedWord
+			}
+
+			return word
+		})
+
+		notify()
+
+		return updatedWord
+	},
+
 	async deleteWord(id) {
 		await wordsApi.deleteWord(id)
 

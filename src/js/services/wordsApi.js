@@ -22,4 +22,20 @@ export const wordsApi = {
 
 		return id
 	},
+
+	async updateWord(id, updatedData) {
+		const res = await fetch(`${BASE_URL}/${id}`, {
+			method: 'PATCH',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(updatedData),
+		})
+
+		if (!res.ok) {
+			throw new Error('Update failed')
+		}
+
+		return res.json()
+	},
 }

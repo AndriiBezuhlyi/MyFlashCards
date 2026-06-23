@@ -6,11 +6,12 @@ import wordsStore from '../store/wordsStore'
 // - можливість редагувати слова,
 // - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
 class WordsList {
-	constructor({ id, english, translate, status }) {
+	constructor({ id, english, translate, status }, isEditing) {
 		this.id = id
 		this.english = english
 		this.translate = translate
 		this.status = status
+		this.editingId = isEditing
 	}
 
 	render() {
@@ -21,6 +22,12 @@ class WordsList {
 		<path d="M10 11V17" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
 		<path d="M14 11V17" stroke="var(--delete)" stroke-width="1.8" stroke-linecap="round"/>
 		</svg>`
+		const editIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M4.75 19.25H19.25" stroke="var(--text-secondary)" stroke-width="1.25" stroke-linecap="round"/>
+		<path d="M6.25 15.75L7.05 12.15C7.11 11.88 7.25 11.63 7.45 11.43L15.55 3.33C16.06 2.82 16.89 2.82 17.4 3.33L20.67 6.6C21.18 7.11 21.18 7.94 20.67 8.45L12.57 16.55C12.37 16.75 12.12 16.89 11.85 16.95L8.25 17.75C7.07 18.01 5.99 16.93 6.25 15.75Z" stroke="var(--text-secondary)" stroke-width="1.25" stroke-linejoin="round"/>
+		<path d="M14.25 4.75L19.25 9.75" stroke="var(--text-secondary)" stroke-width="1.25" stroke-linecap="round"/>
+		<path d="M7.25 16.75L10.65 15.95L8.05 13.35L7.25 16.75Z" fill="var(--text-secondary)"/>
+		</svg>`
 		const elem = document.createElement('li')
 		elem.classList.add('words__item')
 		elem.dataset.id = this.id
@@ -29,12 +36,23 @@ class WordsList {
 		const ukr =
 			this.translate.charAt(0).toUpperCase() +
 			this.translate.slice(1).toLowerCase()
-		elem.innerHTML = `
+		if (this.editingId) {
+			elem.innerHTML = `
 		<div class="words__item-words">
+		<button class="words__item-edit">${editIcon}</button>
+		<input class="words__item-input words__item-input--english text-md-bold" value=${this.english}> <span class="words__item-slash text-md-bold">/</span> <input class="words__item-input words__item-input--translate text-md opacity" value=${this.translate}>
+		</div>
+		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
+		<button class="words__item-delete">${deleteIcon}</button></div>`
+		} else {
+			elem.innerHTML = `
+		<div class="words__item-words">
+		<button class="words__item-edit">${editIcon}</button>
 		<span class="text-md-bold">${eng}</span> / <span class="text-md opacity">${ukr}</span>
 		</div>
 		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
 		<button class="words__item-delete">${deleteIcon}</button></div>`
+		}
 
 		return elem
 	}
@@ -91,7 +109,8 @@ async function initWordsList(parentSelector) {
 
 	if (!parent) return
 
-	let words = []
+	let words = [],
+		editingId = null
 
 	function renderWords(data) {
 		parent.innerHTML = ''
@@ -103,7 +122,8 @@ async function initWordsList(parentSelector) {
 		}
 
 		data.forEach(word => {
-			const card = new WordsList(word)
+			const isEditing = String(editingId) === String(word.id)
+			const card = new WordsList(word, isEditing)
 			parent.appendChild(card.render())
 		})
 	}
@@ -153,11 +173,25 @@ async function initWordsList(parentSelector) {
 		}
 	}
 
-	wordsStore
-		.subscribe(newWords => {
-			words = newWords
-			render()
-		})
+	function editWords(e) {
+		const editBtn = e.target.closest('.words__item-edit')
+
+		if (!editBtn) return
+
+		const item = editBtn.closest('.words__item')
+		const id = item.dataset.id
+
+		editingId = id
+		render()
+		console.log(editingId)
+	}
+
+	parent.addEventListener('click', editWords)
+
+	wordsStore.subscribe(newWords => {
+		words = newWords
+		render()
+	})
 
 	if (searchInput) {
 		searchInput.addEventListener('input', render)

@@ -55,7 +55,9 @@
 			border-radius: 5px;
 		}
 		&-delete,
-		&-edit {
+		&-edit,
+		&-save,
+		&-cancel {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -77,6 +79,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+		&-wrap {
+			display: flex;
+			flex-direction: column;
 		}
 		&-input {
 			max-width: 170px;

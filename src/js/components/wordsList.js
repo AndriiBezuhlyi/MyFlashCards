@@ -1,4 +1,5 @@
 import { lowerTrim } from '../services/services'
+import { validateWordData } from '../services/wordValidation'
 import wordsStore from '../store/wordsStore'
 ///// Що доробити потрібно:
 // - фільтри по статусу,
@@ -6,12 +7,19 @@ import wordsStore from '../store/wordsStore'
 // - можливість редагувати слова,
 // - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
 class WordsList {
-	constructor({ id, english, translate, status }, isEditing) {
+	constructor(
+		{ id, english, translate, status },
+		isEditing,
+		editErrors,
+		editValues,
+	) {
 		this.id = id
 		this.english = english
 		this.translate = translate
 		this.status = status
-		this.editingId = isEditing
+		this.isEditing = isEditing
+		this.editErrors = editErrors
+		this.editValues = editValues
 	}
 
 	render() {
@@ -28,6 +36,13 @@ class WordsList {
 		<path d="M14.25 4.75L19.25 9.75" stroke="var(--text-secondary)" stroke-width="1.25" stroke-linecap="round"/>
 		<path d="M7.25 16.75L10.65 15.95L8.05 13.35L7.25 16.75Z" fill="var(--text-secondary)"/>
 		</svg>`
+		const saveIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M5 12.6L9.15 16.75L19 6.75" stroke="var(--text-secondary)" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+	  </svg>`
+		const cancelIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M7 7L17 17" stroke="var(--text-secondary)" stroke-width="1.35" stroke-linecap="round"/>
+		<path d="M17 7L7 17" stroke="var(--text-secondary)" stroke-width="1.35" stroke-linecap="round"/>
+	  </svg>`
 		const elem = document.createElement('li')
 		elem.classList.add('words__item')
 		elem.dataset.id = this.id
@@ -36,11 +51,14 @@ class WordsList {
 		const ukr =
 			this.translate.charAt(0).toUpperCase() +
 			this.translate.slice(1).toLowerCase()
-		if (this.editingId) {
+		if (this.isEditing) {
 			elem.innerHTML = `
 		<div class="words__item-words">
-		<button class="words__item-edit">${editIcon}</button>
-		<input class="words__item-input words__item-input--english text-md-bold" value=${this.english}> <span class="words__item-slash text-md-bold">/</span> <input class="words__item-input words__item-input--translate text-md opacity" value=${this.translate}>
+		<button class="words__item-save">${saveIcon}</button>
+		<button class="words__item-cancel">${cancelIcon}</button>
+		<div class="words__item-wrap"> <span class="words__item-error">${this.editErrors.english}</span>
+		<input class="words__item-input words__item-input--english text-md-bold" value="${this.editValues.english}"></div> <span class="words__item-slash text-md-bold">/</span> <div class="words__item-wrap"><span class="words__item-error">${this.editErrors.translate}</span>
+		<input class="words__item-input words__item-input--translate text-md opacity" value="${this.editValues.translate}"></div>
 		</div>
 		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
 		<button class="words__item-delete">${deleteIcon}</button></div>`
@@ -110,7 +128,15 @@ async function initWordsList(parentSelector) {
 	if (!parent) return
 
 	let words = [],
-		editingId = null
+		editingId = null,
+		editErrors = {
+			english: '',
+			translate: '',
+		},
+		editValues = {
+			english: '',
+			translate: '',
+		}
 
 	function renderWords(data) {
 		parent.innerHTML = ''
@@ -123,7 +149,7 @@ async function initWordsList(parentSelector) {
 
 		data.forEach(word => {
 			const isEditing = String(editingId) === String(word.id)
-			const card = new WordsList(word, isEditing)
+			const card = new WordsList(word, isEditing, editErrors, editValues)
 			parent.appendChild(card.render())
 		})
 	}
@@ -173,16 +199,89 @@ async function initWordsList(parentSelector) {
 		}
 	}
 
-	function editWords(e) {
-		const editBtn = e.target.closest('.words__item-edit')
+	async function editWords(e) {
+		const editBtn = e.target.closest('.words__item-edit'),
+			cancelBtn = e.target.closest('.words__item-cancel'),
+			saveBtn = e.target.closest('.words__item-save')
 
-		if (!editBtn) return
+		let activeBtn
 
-		const item = editBtn.closest('.words__item')
+		if (!editBtn && !cancelBtn && !saveBtn) {
+			return
+		}
+
+		if (cancelBtn) {
+			editingId = null
+			editValues = {
+				english: '',
+				translate: '',
+			}
+			editErrors = {
+				english: '',
+				translate: '',
+			}
+			render()
+			return
+		}
+
+		activeBtn = editBtn || cancelBtn || saveBtn
+		const item = activeBtn.closest('.words__item')
 		const id = item.dataset.id
 
-		editingId = id
-		render()
+		if (saveBtn) {
+			const english = item.querySelector('.words__item-input--english')
+			const translate = item.querySelector('.words__item-input--translate')
+
+			const validationResult = validateWordData({
+				english: english.value,
+				translate: translate.value,
+			})
+
+			if (!validationResult.isValid) {
+				editValues = {
+					english: english.value,
+					translate: translate.value,
+				}
+				editErrors = validationResult.errors
+				render()
+				return
+			}
+
+			try {
+				await wordsStore.updateWord(id, validationResult.values)
+				editingId = null
+				editValues = {
+					english: '',
+					translate: '',
+				}
+				editErrors = {
+					english: '',
+					translate: '',
+				}
+				render()
+				return
+			} catch (error) {
+				console.error(`Виникла помилка: ${error}`)
+			}
+		}
+
+		if (editBtn) {
+			editingId = id
+			editErrors = {
+				english: '',
+				translate: '',
+			}
+			words.find(item => {
+				if (String(item.id) === id) {
+					editValues.english = item.english
+					editValues.translate = item.translate
+				}
+			})
+
+			render()
+			return
+		}
+
 		console.log(editingId)
 	}
 

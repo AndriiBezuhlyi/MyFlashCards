@@ -3,7 +3,8 @@
 // 4 - Throttle / Debounce: Якщо ти захочеш додати перевірку "чи є таке слово вже в базі" через fetch під час введення, обов'язково використовуй debounce. Це вбереже твій сервер від 10 запитів на секунду, поки юзер друкує слово
 // 5 - Архітектурна "фішка": Об'єкт помилок. Зараз у тебе багато if. Коли перевірок стане більше (наприклад, заборона цифр, спецсимволів тощо), код стане важко читати. Порада: Створи об'єкт зі схемами валідації. Це зробить функцію validateForm набагато чистішою.
 
-import { lowerTrim, postData } from '../services/services'
+import { lowerTrim } from '../services/services'
+import { validateWordData } from '../services/wordValidation'
 import wordsStore from '../store/wordsStore'
 
 export default function initForm(formSelector) {
@@ -25,9 +26,6 @@ export default function initForm(formSelector) {
 		errorEnglish = document.getElementById('error-english'),
 		errorTranslate = document.getElementById('error-translate')
 
-	const engReg = /^[a-zA-Z\s-]+$/,
-		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ,'\s-]+$/
-
 	if (!englishInput || !translateInput || !addButton) {
 		console.error('Не знайдено елементи форми! Перевір id в HTML')
 		return
@@ -42,41 +40,27 @@ export default function initForm(formSelector) {
 	}
 
 	function validateForm() {
+		const validationResult = validateWordData({
+			english: englishInput.value,
+			translate: translateInput.value,
+		})
+
 		formState.english = lowerTrim(englishInput.value)
 		formState.translate = lowerTrim(translateInput.value)
 
-		errorEnglish.textContent = ''
-		errorTranslate.textContent = ''
-
-		let isValid = true
-
-		if (formState.english === '') {
-			isValid = false
+		if (formState.englishTouched) {
+			errorEnglish.textContent = validationResult.errors.english
+		} else {
+			errorEnglish.textContent = ''
 		}
-		if (formState.translate === '') {
-			isValid = false
-		}
-
-		if (formState.english === '' && formState.englishTouched) {
-			errorEnglish.textContent = 'Поле не може бути порожнім'
-			isValid = false
-		}
-		if (formState.translate === '' && formState.translateTouched) {
-			errorTranslate.textContent = 'Поле не може бути порожнім'
-			isValid = false
+		if (formState.translateTouched) {
+			errorTranslate.textContent = validationResult.errors.translate
+		} else {
+			errorTranslate.textContent = ''
 		}
 
-		if (formState.english !== '' && !engReg.test(formState.english)) {
-			errorEnglish.textContent = 'Only for english'
-			isValid = false
-		}
-		if (formState.translate !== '' && !ukrReg.test(formState.translate)) {
-			errorTranslate.textContent = 'Тільки для української'
-			isValid = false
-		}
-
-		formState.isValid = isValid
-		addButton.disabled = !isValid
+		formState.isValid = validationResult.isValid
+		addButton.disabled = !validationResult.isValid
 	}
 
 	englishInput.addEventListener('input', () => {
@@ -108,6 +92,12 @@ export default function initForm(formSelector) {
 		form.addEventListener('submit', e => {
 			e.preventDefault()
 
+			formState.englishTouched = true
+			formState.translateTouched = true
+			validateForm()
+
+			if (formState.isValid === false) return
+
 			const statusMessage = document.createElement('img')
 			statusMessage.src = message.loading
 			statusMessage.style.cssText = `
@@ -126,36 +116,30 @@ export default function initForm(formSelector) {
 			obj.status = 'new'
 			obj.repetitions = 0
 
-			const json = JSON.stringify(obj)
+			wordsStore
+				.addWord(obj)
+				.then(data => {
+					console.log(data)
+					statusMessage.remove()
+					showMessage(message.success)
+				})
+				.catch(error => {
+					statusMessage.remove()
+					showMessage(message.failure)
+					console.error(error)
+				})
+				.finally(() => {
+					form.reset()
+					englishInput.focus()
 
-			formState.englishTouched = true
-			formState.translateTouched = true
-			if (formState.isValid) {
-				wordsStore
-					.addWord(obj)
-					.then(data => {
-						console.log(data)
-						statusMessage.remove()
-						showMessage(message.success)
-					})
-					.catch(error => {
-						statusMessage.remove()
-						showMessage(message.failure)
-						console.error(error)
-					})
-					.finally(() => {
-						form.reset()
-						englishInput.focus()
+					formState.english = ''
+					formState.translate = ''
+					formState.englishTouched = false
+					formState.translateTouched = false
+					formState.isValid = false
 
-						formState.english = ''
-						formState.translate = ''
-						formState.englishTouched = false
-						formState.translateTouched = false
-						formState.isValid = false
-
-						validateForm()
-					})
-			}
+					validateForm()
+				})
 		})
 	}
 

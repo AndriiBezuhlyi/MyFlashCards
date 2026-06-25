@@ -271,12 +271,14 @@ async function initWordsList(parentSelector) {
 				english: '',
 				translate: '',
 			}
-			words.find(item => {
-				if (String(item.id) === id) {
-					editValues.english = item.english
-					editValues.translate = item.translate
-				}
-			})
+			const foundWord = words.find(item => String(item.id) === String(id))
+
+			if (!foundWord) return
+
+			editValues = {
+				english: foundWord.english,
+				translate: foundWord.translate,
+			}
 
 			render()
 			return

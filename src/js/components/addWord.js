@@ -119,7 +119,6 @@ export default function initForm(formSelector) {
 			wordsStore
 				.addWord(obj)
 				.then(data => {
-					console.log(data)
 					statusMessage.remove()
 					showMessage(message.success)
 				})

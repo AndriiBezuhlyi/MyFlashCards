@@ -32,11 +32,16 @@ export default function initStudy() {
 	const warning = document.createElement('div')
 	warning.classList.add('study__warning')
 	warning.classList.add('card')
-	warning.innerHTML = `Недостатньо слів для вивчення,</br> додайте слова або виберіть меншу кількість`
+	const warningTimer = () => {
+		setTimeout(() => {
+			warning.remove()
+		}, 3000)
+	}
 
 	let quantity = 25
 
 	let questions = [],
+		allWords = [],
 		currentIndex = 0,
 		correctAnswers = 0
 
@@ -70,6 +75,7 @@ export default function initStudy() {
 	async function startStudySession(count) {
 		const parent = document.querySelector('.study__choose')
 		let data = wordsStore.getWords()
+
 		if (data.length === 0) {
 			await wordsStore.loadWords()
 			data = wordsStore.getWords()
@@ -77,13 +83,22 @@ export default function initStudy() {
 		if (!data) {
 			return
 		}
-		if (data.length < quantity && data.length > 3) {
+
+		allWords = data
+
+		if (data.length < 3) {
+			warning.innerHTML = `Додайте мінімум 3 слова для тесту`
 			parent.append(warning)
-			setTimeout(() => {
-				warning.remove()
-			}, 3000)
+			warningTimer()
 			return
 		}
+		if (data.length < quantity) {
+			warning.innerHTML = `Недостатньо слів для такої кількості питань`
+			parent.append(warning)
+			warningTimer()
+			return
+		}
+
 		const shuffled = [...data]
 		shuffle(shuffled)
 
@@ -124,7 +139,6 @@ export default function initStudy() {
 			selectedAnswer.classList.add('correct')
 			correctAnswers++
 			setTimeout(updateQuestion, 2500)
-			console.log(true)
 		} else {
 			answersList.forEach(item => {
 				if (item.textContent.trim() === questions[currentIndex].translate) {
@@ -133,14 +147,18 @@ export default function initStudy() {
 			})
 			selectedAnswer.classList.add('wrong')
 			setTimeout(updateQuestion, 3000)
-			console.log(false)
 		}
 	})
 
 	function renderQuestion() {
+		if (questions.length === 0 || !questions[currentIndex]) return
+
 		const currentWord = questions[currentIndex]
 		let english = currentWord.english
 		const answers = generateAnswers(currentWord)
+
+		if (!answers || answers.length < 3) return
+
 		parent.innerHTML = `
           <div class="study__mode">
 						<div class="study__mode-question text-lg card">${english}</div>
@@ -150,21 +168,14 @@ export default function initStudy() {
 							<li class='answer'><button class='answer-btn'>${answers[2]}</button></li>
 						</ul>
 					</div>`
-
-		console.log(answers)
 	}
 
 	function generateAnswers(currentWord) {
-		if (!questions || questions.length === 0) {
-			console.log('questions ще порожні')
-			return
-		}
 		let correct = currentWord.translate
-		let otherWords = questions.filter(w => w.id !== currentWord.id)
-		if (otherWords.length < 2) {
-			console.warn('Недостатньо варіантів для запитання')
-			return [correct]
-		}
+		let otherWords = allWords.filter(w => w.id !== currentWord.id)
+
+		if (otherWords.length < 2) return
+
 		shuffle(otherWords)
 
 		let answers = [correct, otherWords[0].translate, otherWords[1].translate]

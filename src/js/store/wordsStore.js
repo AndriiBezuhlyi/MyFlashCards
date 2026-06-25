@@ -1,4 +1,4 @@
-import { wordsApi } from '../services/wordsAPI'
+import { wordsApi } from '../services/wordsApi'
 
 let words = []
 let subscribers = []
@@ -34,7 +34,6 @@ const wordsStore = {
 		return newWord
 	},
 
-	
 	async updateWord(id, updatedData) {
 		const updatedWord = await wordsApi.updateWord(id, updatedData)
 
@@ -54,7 +53,7 @@ const wordsStore = {
 	async deleteWord(id) {
 		await wordsApi.deleteWord(id)
 
-		words = words.filter(word => word.id !== id)
+		words = words.filter(word => String(word.id) !== String(id))
 
 		notify()
 	},

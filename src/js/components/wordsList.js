@@ -283,8 +283,6 @@ async function initWordsList(parentSelector) {
 			render()
 			return
 		}
-
-		console.log(editingId)
 	}
 
 	parent.addEventListener('click', editWords)

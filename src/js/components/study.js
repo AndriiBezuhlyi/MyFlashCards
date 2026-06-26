@@ -122,11 +122,14 @@ export default function initStudy() {
 			parent.innerHTML = initialScreenHTML
 
 			questions = []
+			allWords = []
 			currentIndex = 0
 			correctAnswers = 0
 			isAnswered = false
+			quantity = 25
 
 			bindStartScreenEvents()
+			return
 		}
 
 		if (!selectedAnswer) return
@@ -138,6 +141,7 @@ export default function initStudy() {
 		if (selectedAnswer.textContent === questions[currentIndex].translate) {
 			selectedAnswer.classList.add('correct')
 			correctAnswers++
+			await updateWordProgress(questions[currentIndex])
 			setTimeout(updateQuestion, 2500)
 		} else {
 			answersList.forEach(item => {
@@ -149,6 +153,31 @@ export default function initStudy() {
 			setTimeout(updateQuestion, 3000)
 		}
 	})
+
+	function getStatusByRepetitions(repetitions) {
+		if (repetitions >= 15) return 'learned'
+
+		if (repetitions >= 5) return 'learning'
+
+		return 'new'
+	}
+
+	async function updateWordProgress(currentWord) {
+		const words = wordsStore.getWords()
+		const actualWord = words.find(
+			item => String(item.id) === String(currentWord.id),
+		)
+		if (!actualWord) return
+
+		const oldRepetitions = Number(actualWord.repetitions) || 0
+		const newRepetitions = oldRepetitions + 1
+		const newStatus = getStatusByRepetitions(newRepetitions)
+
+		wordsStore.updateWord(actualWord.id, {
+			repetitions: newRepetitions,
+			status: newStatus,
+		})
+	}
 
 	function renderQuestion() {
 		if (questions.length === 0 || !questions[currentIndex]) return

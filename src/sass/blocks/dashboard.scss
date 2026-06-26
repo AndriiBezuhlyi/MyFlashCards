@@ -1,31 +1,37 @@
 @use '../base/variables' as *;
 
 .dashboard {
-	height: 100%;
-
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto 1fr;
-	gap: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
 	&__welcome {
+		width: 100%;
+		max-width: 720px;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-
-		grid-column: 1 / -1;
-		grid-row: 1 / 2;
+		justify-content: center;
+		text-align: center;
 	}
-	&__streak {
-			grid-column: 1 / -1;
-			grid-row: 2 / 3;
-
-			display: flex;
-			justify-content: space-around;
+	&__information {
+		width: 100%;
+		max-width: 720px;
+		padding: 24px;
+		&-title {
+			text-align: center;
+			margin-bottom: 24px;
 		}
-	&__cards {
-		grid-column: 1 / -1;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 20px;
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 16px;
+		}
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			padding: 16px 20px;
+		}
 	}
 }

@@ -21,6 +21,15 @@ $border: var(--border);
 	--correct: #74dca38a;
 	--wrong: #fa4d4d60;
 	--delete: #a60f0f9a;
+
+	--status-new-bg: #e5d0b89f;
+	--status-new-text: #745b43;
+
+	--status-learning-bg: #b2e4b7bb;
+	--status-learning-text: #4f684f;
+
+	--status-learned-bg: #a8d2e79f;
+	--status-learned-text: #536a76;
 }
 
 [data-theme='dark'] {
@@ -39,4 +48,13 @@ $border: var(--border);
 	--correct: #a1ffcb4d;
 	--wrong: #fe8c8c60;
 	--delete: #b62e2e;
+
+	--status-new-bg: rgba(244, 196, 92, 0.18);
+	--status-new-text: #f4c45c;
+
+	--status-learning-bg: rgba(126, 190, 135, 0.18);
+	--status-learning-text: #9ed7a5;
+
+	--status-learned-bg: rgba(128, 184, 213, 0.18);
+	--status-learned-text: #9bcde5;
 }

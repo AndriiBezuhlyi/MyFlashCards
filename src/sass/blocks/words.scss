@@ -1,14 +1,17 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .words {
 	position: relative;
 
-	grid-template-columns: 1fr;
-	grid-template-rows: 0.1fr 1fr;
+	display: flex;
 	gap: 20px;
 
 	min-height: 0;
 	height: 100%;
+	@include respond(tablet) {
+		
+	}
 	&__list {
 		display: flex;
 		flex-direction: column;
@@ -50,9 +53,20 @@
 		}
 		&-status {
 			padding: 5px 10px;
-			background-color: var(--accent-mint-60);
 			color: var(--bg-panel);
 			border-radius: 5px;
+			&--new {
+				background-color: var(--status-new-bg);
+				color: var(--status-new-text);
+			}
+			&--learning {
+				background-color: var(--status-learning-bg);
+				color: var(--status-learning-text);
+			}
+			&--learned {
+				background-color: var(--status-learned-bg);
+				color: var(--status-learned-text);
+			}
 		}
 		&-delete,
 		&-edit,

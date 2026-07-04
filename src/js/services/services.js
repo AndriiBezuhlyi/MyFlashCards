@@ -26,3 +26,11 @@ export const getResources = async url => {
 export function lowerTrim(value) {
 	return value.toLowerCase().trim()
 }
+
+export function capitalizeFirst(value) {
+	if (!value) return ''
+
+	const text = String(value).trim().toLowerCase()
+
+	return text.charAt(0).toUpperCase() + text.slice(1)
+}

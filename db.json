@@ -1,1566 +1,1566 @@
 {
-	"words": [
-		{
-			"english": "chase",
-			"translate": "гнатися",
-			"status": "new",
-			"repetitions": 3,
-			"id": "Bqy8TEB_vO0"
-		},
-		{
-			"english": "enough",
-			"translate": "достатьно",
-			"status": "learning",
-			"repetitions": 5,
-			"id": "HXAmaAWXNUw"
-		},
-		{
-			"english": "burnout",
-			"translate": "вигорання",
-			"status": "new",
-			"repetitions": 4,
-			"id": "bmycfai_Xm0"
-		},
-		{
-			"english": "overthink",
-			"translate": "забагато думати",
-			"status": "new",
-			"repetitions": 4,
-			"id": "cT0u56kzZgg"
-		},
-		{
-			"english": "ruin",
-			"translate": "зруйнувати щось",
-			"status": "learning",
-			"repetitions": 5,
-			"id": "tFcLUALDvvk"
-		},
-		{
-			"english": "dodge",
-			"translate": "швидко рухатись щоб уникати чогось",
-			"status": "learning",
-			"repetitions": 5,
-			"id": "DY1WPVU4kOk"
-		},
-		{
-			"english": "potholes",
-			"translate": "метафора для проблем або перешкод",
-			"status": "new",
-			"repetitions": 4,
-			"id": "GiDs5ozkatc"
-		},
-		{
-			"english": "cruise",
-			"translate": "плавний та спокійний рух",
-			"status": "new",
-			"repetitions": 3,
-			"id": "wXExXNBF8bI"
-		},
-		{
-			"english": "loyal",
-			"translate": "зберігаючий вірність та підтримку",
-			"status": "learning",
-			"repetitions": 5,
-			"id": "aPKRpEt9AGo"
-		},
-		{
-			"english": "guilt-free",
-			"translate": "без почуття вини",
-			"status": "new",
-			"repetitions": 4,
-			"id": "o63y5DNHDpc"
-		},
-		{
-			"english": "bottleneck",
-			"translate": "слабка точка",
-			"status": "new",
-			"repetitions": 4,
-			"id": "1uWbVj46NXU"
-		},
-		{
-			"english": "breaktrhough",
-			"translate": "прорив, велике покращення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "3eCODMQawIM"
-		},
-		{
-			"english": "behavior ",
-			"translate": "поведінка",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_sI2GKVtKsg"
-		},
-		{
-			"english": "bump",
-			"translate": "випадково вдарити чи врізатись",
-			"status": "new",
-			"repetitions": 0,
-			"id": "p-rcg_L636U"
-		},
-		{
-			"english": "sneak into",
-			"translate": "підкрастись",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_2I25EOQzrY"
-		},
-		{
-			"english": "flexible",
-			"translate": "гнучкий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "BYMjrPZBt7w"
-		},
-		{
-			"english": "contentment",
-			"translate": "задоволенність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Fhzd8dnoJKA"
-		},
-		{
-			"english": "worth ",
-			"translate": "цінність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "fDqRjbFaxoA"
-		},
-		{
-			"english": "restless",
-			"translate": " неспокійний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "XT3FEdrSfSs"
-		},
-		{
-			"english": "clutter",
-			"translate": "безлад",
-			"status": "new",
-			"repetitions": 0,
-			"id": "MsLe-RqoTe4"
-		},
-		{
-			"english": "presence",
-			"translate": "присутність, зфокусованність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Pcn8NaF91cw"
-		},
-		{
-			"english": "reflect",
-			"translate": "відображати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "IXART-cMpCE"
-		},
-		{
-			"english": "limitless",
-			"translate": "безмежний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "RuRftMu8mgg"
-		},
-		{
-			"english": "science-backed",
-			"translate": "підтверджений наукою",
-			"status": "new",
-			"repetitions": 0,
-			"id": "I0CLxguJEtQ"
-		},
-		{
-			"english": "consistency",
-			"translate": "послідовність, регулярність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "5r9rhRXXQq0"
-		},
-		{
-			"english": "intention",
-			"translate": "намір",
-			"status": "new",
-			"repetitions": 0,
-			"id": "54safYEg6vk"
-		},
-		{
-			"english": "grounded",
-			"translate": "заземлений, емоційно стабільний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "xUGzyRFq39s"
-		},
-		{
-			"english": "overwhelm",
-			"translate": "перевантажений",
-			"status": "new",
-			"repetitions": 0,
-			"id": "StEG_PHa9Y8"
-		},
-		{
-			"english": "awareness",
-			"translate": "усвідомленність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "NKYCLV5B38M"
-		},
-		{
-			"english": "hydrate",
-			"translate": "гідратація",
-			"status": "new",
-			"repetitions": 0,
-			"id": "26ZR3ucjcHY"
-		},
-		{
-			"english": "circadian rhytm",
-			"translate": "біоритм тіла",
-			"status": "new",
-			"repetitions": 0,
-			"id": "9ofnGBzixqo"
-		},
-		{
-			"english": "clarity",
-			"translate": "ясність розуму",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zXezvsPM904"
-		},
-		{
-			"english": "momentum",
-			"translate": "імпульс",
-			"status": "new",
-			"repetitions": 0,
-			"id": "BOiTkexEL7g"
-		},
-		{
-			"english": "identity",
-			"translate": "ідентичність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "rkqQhlU5M-A"
-		},
-		{
-			"english": "resilience",
-			"translate": "стійкість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "9JWpEWgPjrM"
-		},
-		{
-			"english": "efforts",
-			"translate": "зусилля",
-			"status": "new",
-			"repetitions": 0,
-			"id": "yMR24Dcp32Y"
-		},
-		{
-			"english": "embrace",
-			"translate": "приймати, обіймати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "PHpd1BX3feg"
-		},
-		{
-			"english": "inner voice",
-			"translate": "внутрішній голос",
-			"status": "new",
-			"repetitions": 0,
-			"id": "tyVgPSzMxmo"
-		},
-		{
-			"english": "let go",
-			"translate": "відпустити",
-			"status": "new",
-			"repetitions": 0,
-			"id": "5GrmIB2DFBs"
-		},
-		{
-			"english": "evolve",
-			"translate": "розвиватися",
-			"status": "new",
-			"repetitions": 0,
-			"id": "V0ivhGgAnU4"
-		},
-		{
-			"english": "gradual",
-			"translate": "поступово",
-			"status": "new",
-			"repetitions": 1,
-			"id": "Q7WrKx28Fao"
-		},
-		{
-			"english": "self-doubt",
-			"translate": "сумніви в собі",
-			"status": "new",
-			"repetitions": 0,
-			"id": "hNVNDo1R5mY"
-		},
-		{
-			"english": "tune out",
-			"translate": "відключитись, ігнорувати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Wf-L467QTd0"
-		},
-		{
-			"english": "reclaim",
-			"translate": "повернути щось",
-			"status": "new",
-			"repetitions": 0,
-			"id": "az1cEOirJMM"
-		},
-		{
-			"english": "anchor yourself",
-			"translate": "закріпити себе",
-			"status": "new",
-			"repetitions": 0,
-			"id": "56cvRxEAVGs"
-		},
-		{
-			"english": "critisism",
-			"translate": "критика",
-			"status": "new",
-			"repetitions": 0,
-			"id": "yiORBCUcUSI"
-		},
-		{
-			"english": "compassion",
-			"translate": "милосердя",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Q0ceCNgNhPM"
-		},
-		{
-			"english": "encouraging",
-			"translate": "заохочуючий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Wo5tx2qCcyc"
-		},
-		{
-			"english": "essential",
-			"translate": "необхідний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "aulbMd1jqLU"
-		},
-		{
-			"english": "confuse",
-			"translate": "заплутатись",
-			"status": "new",
-			"repetitions": 0,
-			"id": "jhN5IFO6YeU"
-		},
-		{
-			"english": "quitting",
-			"translate": "відмова",
-			"status": "new",
-			"repetitions": 0,
-			"id": "dp0lVfk7kxI"
-		},
-		{
-			"english": "permission",
-			"translate": "дозвіл",
-			"status": "new",
-			"repetitions": 0,
-			"id": "LhkjBLnAeSY"
-		},
-		{
-			"english": "purposeful",
-			"translate": "цілеспрямований",
-			"status": "new",
-			"repetitions": 0,
-			"id": "I8D9B2MXy84"
-		},
-		{
-			"english": "maturity",
-			"translate": "зрілість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "AxpdzCekAlI"
-		},
-		{
-			"english": "patience",
-			"translate": "терпіння",
-			"status": "new",
-			"repetitions": 0,
-			"id": "GpDuxFgbX9g"
-		},
-		{
-			"english": "absorb",
-			"translate": "поглинати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "rFokIY_bsZQ"
-		},
-		{
-			"english": "underrated",
-			"translate": "недооцінений",
-			"status": "new",
-			"repetitions": 1,
-			"id": "d0klji3BqbY"
-		},
-		{
-			"english": "swear",
-			"translate": "клястися",
-			"status": "new",
-			"repetitions": 0,
-			"id": "wHTx3FZ_lw0"
-		},
-		{
-			"english": "judges",
-			"translate": "осудити, судити",
-			"status": "new",
-			"repetitions": 0,
-			"id": "WyZ5A7r4bMk"
-		},
-		{
-			"english": "appreciation",
-			"translate": "вдячність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "MeuN9IeK45w"
-		},
-		{
-			"english": "meltdown",
-			"translate": "коллапс",
-			"status": "new",
-			"repetitions": 0,
-			"id": "y7ELwSG-Af0"
-		},
-		{
-			"english": "bright",
-			"translate": "яркий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "xhBzvgNFOxQ"
-		},
-		{
-			"english": "explode",
-			"translate": "вибухнути",
-			"status": "new",
-			"repetitions": 0,
-			"id": "9x4aQFpszOM"
-		},
-		{
-			"english": "weird",
-			"translate": "дивний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "-cNuHbhopck"
-		},
-		{
-			"english": "pressure",
-			"translate": "тиск",
-			"status": "new",
-			"repetitions": 0,
-			"id": "3YVMUuEqMrA"
-		},
-		{
-			"english": "excuse",
-			"translate": "виправдання",
-			"status": "new",
-			"repetitions": 0,
-			"id": "t7XGxxjgE4s"
-		},
-		{
-			"english": "narrator",
-			"translate": "оповідач",
-			"status": "new",
-			"repetitions": 0,
-			"id": "ZYc3qDA_YYg"
-		},
-		{
-			"english": "hesitate",
-			"translate": "вагатись",
-			"status": "new",
-			"repetitions": 1,
-			"id": "X4Xm-jvuSAk"
-		},
-		{
-			"english": "voiceover",
-			"translate": "закадровий голос",
-			"status": "new",
-			"repetitions": 0,
-			"id": "n4rW75W5GdY"
-		},
-		{
-			"english": "literally",
-			"translate": "буквально",
-			"status": "new",
-			"repetitions": 0,
-			"id": "F_IL0W1ofHA"
-		},
-		{
-			"english": "confident",
-			"translate": "впевнений",
-			"status": "new",
-			"repetitions": 0,
-			"id": "bEj64LpmXF4"
-		},
-		{
-			"english": "awkward",
-			"translate": "незручний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "feXuXxWrXKQ"
-		},
-		{
-			"english": "blank",
-			"translate": "порожнє",
-			"status": "new",
-			"repetitions": 0,
-			"id": "m4HKiQi__Vg"
-		},
-		{
-			"english": "settings",
-			"translate": "налаштування",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zJxbKk1wFdU"
-		},
-		{
-			"english": "dedication",
-			"translate": "відданість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "xR8um1o6M3w"
-		},
-		{
-			"english": "smooth",
-			"translate": "гладкий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "mLSU3z3_KFM"
-		},
-		{
-			"english": "trick",
-			"translate": "трюк, хитрість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "prs6SZBkC6o"
-		},
-		{
-			"english": "struggle",
-			"translate": "боротьба",
-			"status": "new",
-			"repetitions": 0,
-			"id": "vl3mUScf8mY"
-		},
-		{
-			"english": "lack",
-			"translate": "нестача",
-			"status": "new",
-			"repetitions": 0,
-			"id": "7IxHCuBrnhg"
-		},
-		{
-			"english": "no clue",
-			"translate": "не мати уявлення про щось",
-			"status": "new",
-			"repetitions": 0,
-			"id": "IOMZVxleuJc"
-		},
-		{
-			"english": "clever",
-			"translate": "розумний, кмітливий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "johQqjVD-4k"
-		},
-		{
-			"english": "anxiety",
-			"translate": "тривога",
-			"status": "new",
-			"repetitions": 0,
-			"id": "7vp2JIo5jpo"
-		},
-		{
-			"english": "impress",
-			"translate": "вражати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "8w8z5PNfvME"
-		},
-		{
-			"english": "stare",
-			"translate": "витріщатись, втикати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "DokCPTu6DYg"
-		},
-		{
-			"english": "excape",
-			"translate": "втеча",
-			"status": "new",
-			"repetitions": 0,
-			"id": "amsuaPBg-Dg"
-		},
-		{
-			"english": "insurance",
-			"translate": "страхування",
-			"status": "new",
-			"repetitions": 0,
-			"id": "1aEmiSa_uP4"
-		},
-		{
-			"english": "surface",
-			"translate": "поверхня",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_Xg2wdq0ryc"
-		},
-		{
-			"english": "naturally",
-			"translate": "природньо",
-			"status": "new",
-			"repetitions": 0,
-			"id": "-DYMNXPnqT0"
-		},
-		{
-			"english": "mental traffic jam",
-			"translate": "ментальний затор",
-			"status": "new",
-			"repetitions": 0,
-			"id": "E8newsmSnlE"
-		},
-		{
-			"english": "buffering",
-			"translate": "тупити, буферизація",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zndVxuavdoI"
-		},
-		{
-			"english": "self-disclosure",
-			"translate": "розкриватися, ділитися особистим",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Z846hpiMck0"
-		},
-		{
-			"english": "callback",
-			"translate": "повернення до сказанного раніше",
-			"status": "new",
-			"repetitions": 0,
-			"id": "qpURuf43XLk"
-		},
-		{
-			"english": "to belong",
-			"translate": "належати",
-			"status": "new",
-			"repetitions": 1,
-			"id": "RBoA13js-NU"
-		},
-		{
-			"english": "to interrupt",
-			"translate": "переривати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "OQhKFUADV_w"
-		},
-		{
-			"english": "in disguise",
-			"translate": "в маскуванні",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Nqf4PTEK5zo"
-		},
-		{
-			"english": "trail",
-			"translate": "шлях, напрямок",
-			"status": "new",
-			"repetitions": 0,
-			"id": "5m5gwIBMSRw"
-		},
-		{
-			"english": "persistance",
-			"translate": "наполегливість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "XRKykx-AyL4"
-		},
-		{
-			"english": "surround",
-			"translate": "оточувати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "xjrjFhYOU6U"
-		},
-		{
-			"english": "fancy",
-			"translate": "вигаданий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "XML0Qpadz0o"
-		},
-		{
-			"english": "exist",
-			"translate": "існувати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "e9-IJzplS0Q"
-		},
-		{
-			"english": "complicate",
-			"translate": "ускладнювати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "DUahoFFt4WA"
-		},
-		{
-			"english": "opposite",
-			"translate": "навпроти, протилежний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "aiJzlRxLJ8A"
-		},
-		{
-			"english": "reach",
-			"translate": "досягати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "GiEaEBzgx1k"
-		},
-		{
-			"english": "mindset",
-			"translate": "мислення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "MwBOfpgq1uY"
-		},
-		{
-			"english": "growth",
-			"translate": "зростання",
-			"status": "new",
-			"repetitions": 0,
-			"id": "lcgtd7L1N7U"
-		},
-		{
-			"english": "discomfort",
-			"translate": "дискомфорт",
-			"status": "new",
-			"repetitions": 1,
-			"id": "OHbiYP2W-M8"
-		},
-		{
-			"english": "risk",
-			"translate": "ризик",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Q5EjAvtoQHY"
-		},
-		{
-			"english": "responsibility",
-			"translate": "відповідальність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zmH9yZls63c"
-		},
-		{
-			"english": "contribution",
-			"translate": "внесок",
-			"status": "new",
-			"repetitions": 0,
-			"id": "qJeAmFVmYDY"
-		},
-		{
-			"english": "fulfillment",
-			"translate": "глибоке задоволення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "IITBhwc6hwY"
-		},
-		{
-			"english": "adjust",
-			"translate": "регулювати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "0Cz7y22o6Lo"
-		},
-		{
-			"english": "confidence",
-			"translate": "впевненість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "1eCVCTXnzSU"
-		},
-		{
-			"english": "courage",
-			"translate": "мужність, хоробрість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "vzEVe4n1A68"
-		},
-		{
-			"english": "endurance",
-			"translate": "витривалість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "YAOEXiOOVrE"
-		},
-		{
-			"english": "sustainable",
-			"translate": "стійкий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "iXRMJQTvpdI"
-		},
-		{
-			"english": "pretend",
-			"translate": "прикидатися",
-			"status": "new",
-			"repetitions": 0,
-			"id": "7OgQEG2_TQc"
-		},
-		{
-			"english": "barefoot",
-			"translate": "босоніж",
-			"status": "new",
-			"repetitions": 0,
-			"id": "3D7LIbfUCnA"
-		},
-		{
-			"english": "postpone",
-			"translate": "відкласти на потім",
-			"status": "new",
-			"repetitions": 0,
-			"id": "I5f9lp697hM"
-		},
-		{
-			"english": "temptation",
-			"translate": "спокуса",
-			"status": "new",
-			"repetitions": 0,
-			"id": "14y90pxnY0Q"
-		},
-		{
-			"english": "tangible",
-			"translate": "матеріальний, реальний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "hiV7S_-7aJg"
-		},
-		{
-			"english": "summit",
-			"translate": "вершина",
-			"status": "new",
-			"repetitions": 0,
-			"id": "2GRQr2wZQfo"
-		},
-		{
-			"english": "committed",
-			"translate": "відданість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Vq1DJUYGRLw"
-		},
-		{
-			"english": "fluency",
-			"translate": "вільне володіння",
-			"status": "new",
-			"repetitions": 0,
-			"id": "1nmciQQ4RSY"
-		},
-		{
-			"english": "denser",
-			"translate": "густіший, щільніший",
-			"status": "new",
-			"repetitions": 0,
-			"id": "RuEVobnN8bs"
-		},
-		{
-			"english": "adversity",
-			"translate": "негаразди, труднощі",
-			"status": "new",
-			"repetitions": 0,
-			"id": "D99h-6j0vZI"
-		},
-		{
-			"english": "spotlight",
-			"translate": "центр уваги",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Wb0kO4w2oII"
-		},
-		{
-			"english": "constant",
-			"translate": "постійний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "oG_yDMWQ0l8"
-		},
-		{
-			"english": "approval",
-			"translate": "затвердження",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Ck7IxQ2PQio"
-		},
-		{
-			"english": "exhaust",
-			"translate": "виснажити",
-			"status": "new",
-			"repetitions": 1,
-			"id": "7eHizulyfiM"
-		},
-		{
-			"english": "justify",
-			"translate": "виправдання, обгрунтування",
-			"status": "new",
-			"repetitions": 1,
-			"id": "wEjpZUW-SPE"
-		},
-		{
-			"english": "deserve",
-			"translate": "заслуговувати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "UhLTEvuQmE0"
-		},
-		{
-			"english": "intensity",
-			"translate": "інтенсивність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "-n59VVV2u84"
-		},
-		{
-			"english": "cue",
-			"translate": "сигнал, підказка",
-			"status": "new",
-			"repetitions": 0,
-			"id": "742B1zcUPnU"
-		},
-		{
-			"english": "proactive",
-			"translate": "проактивний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "xH32cQdHXfM"
-		},
-		{
-			"english": "vision",
-			"translate": "бачення, уявлення про майбутнє",
-			"status": "new",
-			"repetitions": 0,
-			"id": "LsU6Lnul3iQ"
-		},
-		{
-			"english": "humility",
-			"translate": "скромність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "vMxrE4xvnZk"
-		},
-		{
-			"english": "spread oneself too thin",
-			"translate": "брати на себе забагато",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Ha1eCNtZEqo"
-		},
-		{
-			"english": "willpower",
-			"translate": "сила волі",
-			"status": "new",
-			"repetitions": 0,
-			"id": "O1Ndny-pAeg"
-		},
-		{
-			"english": "ahead",
-			"translate": "попереду",
-			"status": "new",
-			"repetitions": 0,
-			"id": "HBT3ayLGQeQ"
-		},
-		{
-			"english": "starve",
-			"translate": "голодувати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "98aM9MoHTks"
-		},
-		{
-			"english": "embarrass",
-			"translate": "сором",
-			"status": "new",
-			"repetitions": 0,
-			"id": "J4jJVODFDqo"
-		},
-		{
-			"english": "passion",
-			"translate": "пристрасть",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Id2YxidJex4"
-		},
-		{
-			"english": "commute",
-			"translate": "поїздка з дому на роботу або назад",
-			"status": "new",
-			"repetitions": 0,
-			"id": "6E-13FjrDz4"
-		},
-		{
-			"english": "nightmare",
-			"translate": "нічний кошмар",
-			"status": "new",
-			"repetitions": 0,
-			"id": "9o4oRenpyYk"
-		},
-		{
-			"english": "sway",
-			"translate": "хитатись",
-			"status": "new",
-			"repetitions": 0,
-			"id": "u1td-YQ-wxo"
-		},
-		{
-			"english": "convenient",
-			"translate": "зручний, вигідний, комфортний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "6ux2uOggcZY"
-		},
-		{
-			"english": "crowded",
-			"translate": "переповнений людьми",
-			"status": "new",
-			"repetitions": 0,
-			"id": "EZCtW-3ZlwY"
-		},
-		{
-			"english": "symptom",
-			"translate": "симптом",
-			"status": "new",
-			"repetitions": 0,
-			"id": "lilllvzgAKI"
-		},
-		{
-			"english": "treatment",
-			"translate": "лікування",
-			"status": "new",
-			"repetitions": 0,
-			"id": "BcAIC7R82oI"
-		},
-		{
-			"english": "stressful",
-			"translate": "стресовий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "jf3zYapheco"
-		},
-		{
-			"english": "recovery",
-			"translate": "відновлення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "9vD3N-jOq3w"
-		},
-		{
-			"english": "appointment",
-			"translate": "запис, прийом",
-			"status": "new",
-			"repetitions": 0,
-			"id": "rLOkrBp5-mI"
-		},
-		{
-			"english": "for comparison",
-			"translate": "для порівняння",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zjhNcu8qG3U"
-		},
-		{
-			"english": "advantage",
-			"translate": "перевага",
-			"status": "new",
-			"repetitions": 0,
-			"id": "XrmwczCgAxY"
-		},
-		{
-			"english": "direction",
-			"translate": "напрямок, курс руху",
-			"status": "new",
-			"repetitions": 0,
-			"id": "spjvrbvlfRI"
-		},
-		{
-			"english": "lost a long time",
-			"translate": "бути довговічним, тривати довго",
-			"status": "new",
-			"repetitions": 0,
-			"id": "HmYTeK45rm4"
-		},
-		{
-			"english": "energy-efficient",
-			"translate": "енергоефективний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "L5MYAw-reOs"
-		},
-		{
-			"english": "in addition",
-			"translate": "крім того, додатково",
-			"status": "new",
-			"repetitions": 0,
-			"id": "8J4U9Rl_mFg"
-		},
-		{
-			"english": "stuck",
-			"translate": "застрягнути",
-			"status": "new",
-			"repetitions": 0,
-			"id": "3Cp8DY6KW7E"
-		},
-		{
-			"english": "prevent",
-			"translate": "запобігати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "yPt9bjp8hzk"
-		},
-		{
-			"english": "sight",
-			"translate": "зір",
-			"status": "new",
-			"repetitions": 0,
-			"id": "tlwoQa7G5gY"
-		},
-		{
-			"english": "accident",
-			"translate": "аварія",
-			"status": "new",
-			"repetitions": 0,
-			"id": "uBG-pmTKtDE"
-		},
-		{
-			"english": "caught",
-			"translate": "пійманий",
-			"status": "new",
-			"repetitions": 0,
-			"id": "A4eDQ3XpRu4"
-		},
-		{
-			"english": "amount",
-			"translate": "кількість, сума",
-			"status": "new",
-			"repetitions": 0,
-			"id": "u2X_PjSo26s"
-		},
-		{
-			"english": "reduce",
-			"translate": "зменшувати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "pn6Lxy1rX0A"
-		},
-		{
-			"english": "whisper",
-			"translate": "шепіт",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zUt2faCPzf4"
-		},
-		{
-			"english": "hold back",
-			"translate": "стримувати через страх або сумніви",
-			"status": "new",
-			"repetitions": 0,
-			"id": "lBzM10XjM88"
-		},
-		{
-			"english": "struggle",
-			"translate": "важке зусилля",
-			"status": "new",
-			"repetitions": 0,
-			"id": "1aAXpApiGH8"
-		},
-		{
-			"english": "colleague",
-			"translate": "коллега",
-			"status": "new",
-			"repetitions": 0,
-			"id": "GgIdNB63ak0"
-		},
-		{
-			"english": "gratitude",
-			"translate": "вдячність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Ky1hG8R0i2U"
-		},
-		{
-			"english": "recognize",
-			"translate": "визнавати, впізнавати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "L0jjJysb5TU"
-		},
-		{
-			"english": "lift up",
-			"translate": "підіймати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "y-q56M-CZXg"
-		},
-		{
-			"english": "it depends",
-			"translate": "це залежить",
-			"status": "new",
-			"repetitions": 0,
-			"id": "ogfk8UYwM5E"
-		},
-		{
-			"english": "from scratch",
-			"translate": "з нуля, з чистого листа",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Rc2SYV9glqk"
-		},
-		{
-			"english": "Actually",
-			"translate": "насправді",
-			"status": "new",
-			"repetitions": 0,
-			"id": "6-IEC4TTPgU"
-		},
-		{
-			"english": "In fact",
-			"translate": "фактично",
-			"status": "new",
-			"repetitions": 0,
-			"id": "o45jCyLI_5E"
-		},
-		{
-			"english": "at first",
-			"translate": "спочатку",
-			"status": "new",
-			"repetitions": 0,
-			"id": "YIfPFbXq51w"
-		},
-		{
-			"english": "eventually",
-			"translate": "зрештою",
-			"status": "new",
-			"repetitions": 0,
-			"id": "teMOu7_pOHs"
-		},
-		{
-			"english": "suddenly",
-			"translate": "раптово",
-			"status": "new",
-			"repetitions": 0,
-			"id": "FEr3dMlRxn0"
-		},
-		{
-			"english": "to be honest",
-			"translate": "чесно кажучи",
-			"status": "new",
-			"repetitions": 0,
-			"id": "kQtYByk9pFw"
-		},
-		{
-			"english": "in the future",
-			"translate": "в майбутньому",
-			"status": "new",
-			"repetitions": 0,
-			"id": "bLzl3QaPjag"
-		},
-		{
-			"english": "at the moment",
-			"translate": "на даний момент",
-			"status": "new",
-			"repetitions": 0,
-			"id": "wDG1YOKhLv0"
-		},
-		{
-			"english": "addiction",
-			"translate": "залежність",
-			"status": "new",
-			"repetitions": 0,
-			"id": "Z4ulrMsM180"
-		},
-		{
-			"english": "carve",
-			"translate": "вирізати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "EQ9SiBQ308k"
-		},
-		{
-			"english": "confesion",
-			"translate": "зізнання",
-			"status": "new",
-			"repetitions": 0,
-			"id": "LVMhBnxvw9M"
-		},
-		{
-			"english": "betraying",
-			"translate": "зрада",
-			"status": "new",
-			"repetitions": 0,
-			"id": "3J6U23k4UVA"
-		},
-		{
-			"english": "miserable",
-			"translate": "нещасний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_CuHVN1rBRY"
-		},
-		{
-			"english": "resentment",
-			"translate": "образа",
-			"status": "new",
-			"repetitions": 0,
-			"id": "KuDmu2wxNec"
-		},
-		{
-			"english": "reevaluate",
-			"translate": "оцінити заново, переглянути",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_K6yXfE0LmY"
-		},
-		{
-			"english": "blunt",
-			"translate": "тупий",
-			"status": "new",
-			"repetitions": 1,
-			"id": "2ZVGqlC0RQY"
-		},
-		{
-			"english": "conviction",
-			"translate": "переконання",
-			"status": "new",
-			"repetitions": 0,
-			"id": "O7YKqTj6FKI"
-		},
-		{
-			"english": "realize",
-			"translate": "усвідомлювати, розуміти",
-			"status": "new",
-			"repetitions": 1,
-			"id": "qL1YWLTTDww"
-		},
-		{
-			"english": "yell",
-			"translate": "кричати від злості",
-			"status": "new",
-			"repetitions": 0,
-			"id": "K2u_MLoWjp4"
-		},
-		{
-			"english": "scream",
-			"translate": "кричати від страху",
-			"status": "new",
-			"repetitions": 0,
-			"id": "pHStEd7IgBI"
-		},
-		{
-			"english": "weird",
-			"translate": "дивний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "X2ycLCNTWNU"
-		},
-		{
-			"english": "gentle",
-			"translate": "ніжний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "moAltLeZ5-A"
-		},
-		{
-			"english": "adapt",
-			"translate": "адаптуватись",
-			"status": "new",
-			"repetitions": 0,
-			"id": "h-mCm2nENHc"
-		},
-		{
-			"english": "flaw",
-			"translate": "недостаток",
-			"status": "new",
-			"repetitions": 0,
-			"id": "5pLYUUnQ7Hk"
-		},
-		{
-			"english": "drown",
-			"translate": "тонути",
-			"status": "new",
-			"repetitions": 0,
-			"id": "gyYlTnmkUoI"
-		},
-		{
-			"english": "insecure",
-			"translate": "невпевнений",
-			"status": "new",
-			"repetitions": 0,
-			"id": "gyy1ll5CLuY"
-		},
-		{
-			"english": "second-guess",
-			"translate": "сумніватися",
-			"status": "new",
-			"repetitions": 0,
-			"id": "0Mgetusa3ao"
-		},
-		{
-			"english": "terrify",
-			"translate": "лякати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "GcHZn2qPFTw"
-		},
-		{
-			"english": "validate",
-			"translate": "підтвердження",
-			"status": "new",
-			"repetitions": 0,
-			"id": "ttgsmbIP_Ro"
-		},
-		{
-			"english": "show up",
-			"translate": "з'являтись",
-			"status": "new",
-			"repetitions": 0,
-			"id": "dwYArQBNwlQ"
-		},
-		{
-			"english": "own",
-			"translate": "приймати",
-			"status": "new",
-			"repetitions": 1,
-			"id": "e-Mfx7djVjU"
-		},
-		{
-			"english": "inception",
-			"translate": "започаткування",
-			"status": "new",
-			"repetitions": 0,
-			"id": "racqDRqyj6I"
-		},
-		{
-			"english": "fascinates",
-			"translate": "захоплює",
-			"status": "new",
-			"repetitions": 0,
-			"id": "sp1JuufoViE"
-		},
-		{
-			"english": "perspective",
-			"translate": "точка зору",
-			"status": "new",
-			"repetitions": 0,
-			"id": "0pqvli2pFlU"
-		},
-		{
-			"english": "coincidence",
-			"translate": "збіг",
-			"status": "new",
-			"repetitions": 0,
-			"id": "EjMmnuzIGt0"
-		},
-		{
-			"english": "assumption",
-			"translate": "припущення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "N-hzcEzWwVM"
-		},
-		{
-			"english": "influence",
-			"translate": "вплив",
-			"status": "new",
-			"repetitions": 0,
-			"id": "eE6T0wHvqPg"
-		},
-		{
-			"english": "mindset",
-			"translate": "спосіб мислення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "qM6ZgTlamF8"
-		},
-		{
-			"english": "prioritize",
-			"translate": "визначати пріоритети",
-			"status": "new",
-			"repetitions": 0,
-			"id": "vshC6_uI0Xs"
-		},
-		{
-			"english": "overcome",
-			"translate": "долати",
-			"status": "new",
-			"repetitions": 0,
-			"id": "-GmhCK6Ji7I"
-		},
-		{
-			"english": "challenge",
-			"translate": "виклик",
-			"status": "new",
-			"repetitions": 0,
-			"id": "uovbuEAkeso"
-		},
-		{
-			"english": "achievement",
-			"translate": "досягнення",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_HjG_ybFakA"
-		},
-		{
-			"english": "self-awareness",
-			"translate": "самосвідомість",
-			"status": "new",
-			"repetitions": 0,
-			"id": "61y3C9xBJ6w"
-		},
-		{
-			"english": "bizarre",
-			"translate": "дивний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "zQaG15v_pGA"
-		},
-		{
-			"english": "hilarious",
-			"translate": "дуже смішний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "hzZ_yhmP5A4"
-		},
-		{
-			"english": "ancient",
-			"translate": "стародавній",
-			"status": "new",
-			"repetitions": 0,
-			"id": "3vOgTmRj3LI"
-		},
-		{
-			"english": "ordinary",
-			"translate": "звичайний",
-			"status": "new",
-			"repetitions": 0,
-			"id": "E09IvkqKQ7A"
-		},
-		{
-			"english": "creature",
-			"translate": "істота",
-			"status": "new",
-			"repetitions": 0,
-			"id": "PWzNv9YcFyA"
-		},
-		{
-			"english": "phenomenon",
-			"translate": "явище",
-			"status": "new",
-			"repetitions": 0,
-			"id": "_3C-06wkI_Y"
-		}
-	],
-	"$schema": "./node_modules/json-server/schema.json"
+  "words": [
+    {
+      "english": "chase",
+      "translate": "гнатися",
+      "status": "new",
+      "repetitions": 3,
+      "id": "Bqy8TEB_vO0"
+    },
+    {
+      "english": "enough",
+      "translate": "достатьно",
+      "status": "learning",
+      "repetitions": 5,
+      "id": "HXAmaAWXNUw"
+    },
+    {
+      "english": "burnout",
+      "translate": "вигорання",
+      "status": "new",
+      "repetitions": 4,
+      "id": "bmycfai_Xm0"
+    },
+    {
+      "english": "overthink",
+      "translate": "забагато думати",
+      "status": "new",
+      "repetitions": 4,
+      "id": "cT0u56kzZgg"
+    },
+    {
+      "english": "ruin",
+      "translate": "зруйнувати щось",
+      "status": "learning",
+      "repetitions": 5,
+      "id": "tFcLUALDvvk"
+    },
+    {
+      "english": "dodge",
+      "translate": "швидко рухатись щоб уникати чогось",
+      "status": "learning",
+      "repetitions": 5,
+      "id": "DY1WPVU4kOk"
+    },
+    {
+      "english": "potholes",
+      "translate": "метафора для перешкод",
+      "status": "learning",
+      "repetitions": 5,
+      "id": "GiDs5ozkatc"
+    },
+    {
+      "english": "cruise",
+      "translate": "плавний та спокійний рух",
+      "status": "new",
+      "repetitions": 4,
+      "id": "wXExXNBF8bI"
+    },
+    {
+      "english": "loyal",
+      "translate": "зберігаючий вірність та підтримку",
+      "status": "learning",
+      "repetitions": 5,
+      "id": "aPKRpEt9AGo"
+    },
+    {
+      "english": "guilt-free",
+      "translate": "без почуття вини",
+      "status": "new",
+      "repetitions": 4,
+      "id": "o63y5DNHDpc"
+    },
+    {
+      "english": "bottleneck",
+      "translate": "слабка точка",
+      "status": "new",
+      "repetitions": 4,
+      "id": "1uWbVj46NXU"
+    },
+    {
+      "english": "breaktrhough",
+      "translate": "прорив, велике покращення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3eCODMQawIM"
+    },
+    {
+      "english": "behavior ",
+      "translate": "поведінка",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_sI2GKVtKsg"
+    },
+    {
+      "english": "bump",
+      "translate": "випадково вдарити чи врізатись",
+      "status": "new",
+      "repetitions": 0,
+      "id": "p-rcg_L636U"
+    },
+    {
+      "english": "sneak into",
+      "translate": "підкрастись",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_2I25EOQzrY"
+    },
+    {
+      "english": "flexible",
+      "translate": "гнучкий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "BYMjrPZBt7w"
+    },
+    {
+      "english": "contentment",
+      "translate": "задоволенність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Fhzd8dnoJKA"
+    },
+    {
+      "english": "worth ",
+      "translate": "цінність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "fDqRjbFaxoA"
+    },
+    {
+      "english": "restless",
+      "translate": " неспокійний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "XT3FEdrSfSs"
+    },
+    {
+      "english": "clutter",
+      "translate": "безлад",
+      "status": "new",
+      "repetitions": 0,
+      "id": "MsLe-RqoTe4"
+    },
+    {
+      "english": "presence",
+      "translate": "присутність, зфокусованність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Pcn8NaF91cw"
+    },
+    {
+      "english": "reflect",
+      "translate": "відображати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "IXART-cMpCE"
+    },
+    {
+      "english": "limitless",
+      "translate": "безмежний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "RuRftMu8mgg"
+    },
+    {
+      "english": "science-backed",
+      "translate": "підтверджений наукою",
+      "status": "new",
+      "repetitions": 0,
+      "id": "I0CLxguJEtQ"
+    },
+    {
+      "english": "consistency",
+      "translate": "послідовність, регулярність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "5r9rhRXXQq0"
+    },
+    {
+      "english": "intention",
+      "translate": "намір",
+      "status": "new",
+      "repetitions": 0,
+      "id": "54safYEg6vk"
+    },
+    {
+      "english": "grounded",
+      "translate": "заземлений, емоційно стабільний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "xUGzyRFq39s"
+    },
+    {
+      "english": "overwhelm",
+      "translate": "перевантажений",
+      "status": "new",
+      "repetitions": 0,
+      "id": "StEG_PHa9Y8"
+    },
+    {
+      "english": "awareness",
+      "translate": "усвідомленність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "NKYCLV5B38M"
+    },
+    {
+      "english": "hydrate",
+      "translate": "гідратація",
+      "status": "new",
+      "repetitions": 1,
+      "id": "26ZR3ucjcHY"
+    },
+    {
+      "english": "circadian rhytm",
+      "translate": "біоритм тіла",
+      "status": "new",
+      "repetitions": 0,
+      "id": "9ofnGBzixqo"
+    },
+    {
+      "english": "clarity",
+      "translate": "ясність розуму",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zXezvsPM904"
+    },
+    {
+      "english": "momentum",
+      "translate": "імпульс",
+      "status": "new",
+      "repetitions": 0,
+      "id": "BOiTkexEL7g"
+    },
+    {
+      "english": "identity",
+      "translate": "ідентичність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "rkqQhlU5M-A"
+    },
+    {
+      "english": "resilience",
+      "translate": "стійкість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "9JWpEWgPjrM"
+    },
+    {
+      "english": "efforts",
+      "translate": "зусилля",
+      "status": "new",
+      "repetitions": 0,
+      "id": "yMR24Dcp32Y"
+    },
+    {
+      "english": "embrace",
+      "translate": "приймати, обіймати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "PHpd1BX3feg"
+    },
+    {
+      "english": "inner voice",
+      "translate": "внутрішній голос",
+      "status": "new",
+      "repetitions": 0,
+      "id": "tyVgPSzMxmo"
+    },
+    {
+      "english": "let go",
+      "translate": "відпустити",
+      "status": "new",
+      "repetitions": 0,
+      "id": "5GrmIB2DFBs"
+    },
+    {
+      "english": "evolve",
+      "translate": "розвиватися",
+      "status": "new",
+      "repetitions": 0,
+      "id": "V0ivhGgAnU4"
+    },
+    {
+      "english": "gradual",
+      "translate": "поступово",
+      "status": "new",
+      "repetitions": 1,
+      "id": "Q7WrKx28Fao"
+    },
+    {
+      "english": "self-doubt",
+      "translate": "сумніви в собі",
+      "status": "new",
+      "repetitions": 1,
+      "id": "hNVNDo1R5mY"
+    },
+    {
+      "english": "tune out",
+      "translate": "відключитись, ігнорувати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "Wf-L467QTd0"
+    },
+    {
+      "english": "reclaim",
+      "translate": "повернути щось",
+      "status": "new",
+      "repetitions": 0,
+      "id": "az1cEOirJMM"
+    },
+    {
+      "english": "anchor yourself",
+      "translate": "закріпити себе",
+      "status": "new",
+      "repetitions": 0,
+      "id": "56cvRxEAVGs"
+    },
+    {
+      "english": "critisism",
+      "translate": "критика",
+      "status": "new",
+      "repetitions": 0,
+      "id": "yiORBCUcUSI"
+    },
+    {
+      "english": "compassion",
+      "translate": "милосердя",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Q0ceCNgNhPM"
+    },
+    {
+      "english": "encouraging",
+      "translate": "заохочуючий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Wo5tx2qCcyc"
+    },
+    {
+      "english": "essential",
+      "translate": "необхідний",
+      "status": "new",
+      "repetitions": 1,
+      "id": "aulbMd1jqLU"
+    },
+    {
+      "english": "confuse",
+      "translate": "заплутатись",
+      "status": "new",
+      "repetitions": 0,
+      "id": "jhN5IFO6YeU"
+    },
+    {
+      "english": "quitting",
+      "translate": "відмова",
+      "status": "new",
+      "repetitions": 0,
+      "id": "dp0lVfk7kxI"
+    },
+    {
+      "english": "permission",
+      "translate": "дозвіл",
+      "status": "new",
+      "repetitions": 0,
+      "id": "LhkjBLnAeSY"
+    },
+    {
+      "english": "purposeful",
+      "translate": "цілеспрямований",
+      "status": "new",
+      "repetitions": 1,
+      "id": "I8D9B2MXy84"
+    },
+    {
+      "english": "maturity",
+      "translate": "зрілість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "AxpdzCekAlI"
+    },
+    {
+      "english": "patience",
+      "translate": "терпіння",
+      "status": "new",
+      "repetitions": 0,
+      "id": "GpDuxFgbX9g"
+    },
+    {
+      "english": "absorb",
+      "translate": "поглинати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "rFokIY_bsZQ"
+    },
+    {
+      "english": "underrated",
+      "translate": "недооцінений",
+      "status": "new",
+      "repetitions": 2,
+      "id": "d0klji3BqbY"
+    },
+    {
+      "english": "swear",
+      "translate": "клястися",
+      "status": "new",
+      "repetitions": 1,
+      "id": "wHTx3FZ_lw0"
+    },
+    {
+      "english": "judges",
+      "translate": "осудити, судити",
+      "status": "new",
+      "repetitions": 0,
+      "id": "WyZ5A7r4bMk"
+    },
+    {
+      "english": "appreciation",
+      "translate": "вдячність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "MeuN9IeK45w"
+    },
+    {
+      "english": "meltdown",
+      "translate": "коллапс",
+      "status": "new",
+      "repetitions": 0,
+      "id": "y7ELwSG-Af0"
+    },
+    {
+      "english": "bright",
+      "translate": "яскравий",
+      "status": "new",
+      "repetitions": 1,
+      "id": "xhBzvgNFOxQ"
+    },
+    {
+      "english": "explode",
+      "translate": "вибухнути",
+      "status": "new",
+      "repetitions": 0,
+      "id": "9x4aQFpszOM"
+    },
+    {
+      "english": "weird",
+      "translate": "дивний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "-cNuHbhopck"
+    },
+    {
+      "english": "pressure",
+      "translate": "тиск",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3YVMUuEqMrA"
+    },
+    {
+      "english": "excuse",
+      "translate": "виправдання",
+      "status": "new",
+      "repetitions": 0,
+      "id": "t7XGxxjgE4s"
+    },
+    {
+      "english": "narrator",
+      "translate": "оповідач",
+      "status": "new",
+      "repetitions": 0,
+      "id": "ZYc3qDA_YYg"
+    },
+    {
+      "english": "hesitate",
+      "translate": "вагатись",
+      "status": "new",
+      "repetitions": 2,
+      "id": "X4Xm-jvuSAk"
+    },
+    {
+      "english": "voiceover",
+      "translate": "закадровий голос",
+      "status": "new",
+      "repetitions": 0,
+      "id": "n4rW75W5GdY"
+    },
+    {
+      "english": "literally",
+      "translate": "буквально",
+      "status": "new",
+      "repetitions": 0,
+      "id": "F_IL0W1ofHA"
+    },
+    {
+      "english": "confident",
+      "translate": "впевнений",
+      "status": "new",
+      "repetitions": 0,
+      "id": "bEj64LpmXF4"
+    },
+    {
+      "english": "awkward",
+      "translate": "незручний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "feXuXxWrXKQ"
+    },
+    {
+      "english": "blank",
+      "translate": "порожнє",
+      "status": "new",
+      "repetitions": 0,
+      "id": "m4HKiQi__Vg"
+    },
+    {
+      "english": "settings",
+      "translate": "налаштування",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zJxbKk1wFdU"
+    },
+    {
+      "english": "dedication",
+      "translate": "відданість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "xR8um1o6M3w"
+    },
+    {
+      "english": "smooth",
+      "translate": "гладкий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "mLSU3z3_KFM"
+    },
+    {
+      "english": "trick",
+      "translate": "трюк, хитрість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "prs6SZBkC6o"
+    },
+    {
+      "english": "struggle",
+      "translate": "боротьба",
+      "status": "new",
+      "repetitions": 1,
+      "id": "vl3mUScf8mY"
+    },
+    {
+      "english": "lack",
+      "translate": "нестача",
+      "status": "new",
+      "repetitions": 0,
+      "id": "7IxHCuBrnhg"
+    },
+    {
+      "english": "no clue",
+      "translate": "не мати уявлення про щось",
+      "status": "new",
+      "repetitions": 0,
+      "id": "IOMZVxleuJc"
+    },
+    {
+      "english": "clever",
+      "translate": "розумний, кмітливий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "johQqjVD-4k"
+    },
+    {
+      "english": "anxiety",
+      "translate": "тривога",
+      "status": "new",
+      "repetitions": 0,
+      "id": "7vp2JIo5jpo"
+    },
+    {
+      "english": "impress",
+      "translate": "вражати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "8w8z5PNfvME"
+    },
+    {
+      "english": "stare",
+      "translate": "витріщатись, втикати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "DokCPTu6DYg"
+    },
+    {
+      "english": "escape",
+      "translate": "втеча",
+      "status": "new",
+      "repetitions": 1,
+      "id": "amsuaPBg-Dg"
+    },
+    {
+      "english": "insurance",
+      "translate": "страхування",
+      "status": "new",
+      "repetitions": 0,
+      "id": "1aEmiSa_uP4"
+    },
+    {
+      "english": "surface",
+      "translate": "поверхня",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_Xg2wdq0ryc"
+    },
+    {
+      "english": "naturally",
+      "translate": "природньо",
+      "status": "new",
+      "repetitions": 0,
+      "id": "-DYMNXPnqT0"
+    },
+    {
+      "english": "mental traffic jam",
+      "translate": "ментальний затор",
+      "status": "new",
+      "repetitions": 0,
+      "id": "E8newsmSnlE"
+    },
+    {
+      "english": "buffering",
+      "translate": "тупити, буферизація",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zndVxuavdoI"
+    },
+    {
+      "english": "self-disclosure",
+      "translate": "розкриватися, ділитися особистим",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Z846hpiMck0"
+    },
+    {
+      "english": "callback",
+      "translate": "повернення до сказанного раніше",
+      "status": "new",
+      "repetitions": 0,
+      "id": "qpURuf43XLk"
+    },
+    {
+      "english": "to belong",
+      "translate": "належати",
+      "status": "new",
+      "repetitions": 2,
+      "id": "RBoA13js-NU"
+    },
+    {
+      "english": "to interrupt",
+      "translate": "переривати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "OQhKFUADV_w"
+    },
+    {
+      "english": "in disguise",
+      "translate": "в маскуванні",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Nqf4PTEK5zo"
+    },
+    {
+      "english": "trail",
+      "translate": "шлях, напрямок",
+      "status": "new",
+      "repetitions": 0,
+      "id": "5m5gwIBMSRw"
+    },
+    {
+      "english": "persistance",
+      "translate": "наполегливість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "XRKykx-AyL4"
+    },
+    {
+      "english": "surround",
+      "translate": "оточувати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "xjrjFhYOU6U"
+    },
+    {
+      "english": "fancy",
+      "translate": "вигаданий",
+      "status": "new",
+      "repetitions": 1,
+      "id": "XML0Qpadz0o"
+    },
+    {
+      "english": "exist",
+      "translate": "існувати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "e9-IJzplS0Q"
+    },
+    {
+      "english": "complicate",
+      "translate": "ускладнювати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "DUahoFFt4WA"
+    },
+    {
+      "english": "opposite",
+      "translate": "навпроти, протилежний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "aiJzlRxLJ8A"
+    },
+    {
+      "english": "reach",
+      "translate": "досягати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "GiEaEBzgx1k"
+    },
+    {
+      "english": "mindset",
+      "translate": "мислення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "MwBOfpgq1uY"
+    },
+    {
+      "english": "growth",
+      "translate": "зростання",
+      "status": "new",
+      "repetitions": 0,
+      "id": "lcgtd7L1N7U"
+    },
+    {
+      "english": "discomfort",
+      "translate": "дискомфорт",
+      "status": "new",
+      "repetitions": 2,
+      "id": "OHbiYP2W-M8"
+    },
+    {
+      "english": "risk",
+      "translate": "ризик",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Q5EjAvtoQHY"
+    },
+    {
+      "english": "responsibility",
+      "translate": "відповідальність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zmH9yZls63c"
+    },
+    {
+      "english": "contribution",
+      "translate": "внесок",
+      "status": "new",
+      "repetitions": 0,
+      "id": "qJeAmFVmYDY"
+    },
+    {
+      "english": "fulfillment",
+      "translate": "глибоке задоволення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "IITBhwc6hwY"
+    },
+    {
+      "english": "adjust",
+      "translate": "регулювати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "0Cz7y22o6Lo"
+    },
+    {
+      "english": "confidence",
+      "translate": "впевненість",
+      "status": "new",
+      "repetitions": 1,
+      "id": "1eCVCTXnzSU"
+    },
+    {
+      "english": "courage",
+      "translate": "мужність, хоробрість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "vzEVe4n1A68"
+    },
+    {
+      "english": "endurance",
+      "translate": "витривалість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "YAOEXiOOVrE"
+    },
+    {
+      "english": "sustainable",
+      "translate": "стійкий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "iXRMJQTvpdI"
+    },
+    {
+      "english": "pretend",
+      "translate": "прикидатися",
+      "status": "new",
+      "repetitions": 0,
+      "id": "7OgQEG2_TQc"
+    },
+    {
+      "english": "barefoot",
+      "translate": "босоніж",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3D7LIbfUCnA"
+    },
+    {
+      "english": "postpone",
+      "translate": "відкласти на потім",
+      "status": "new",
+      "repetitions": 0,
+      "id": "I5f9lp697hM"
+    },
+    {
+      "english": "temptation",
+      "translate": "спокуса",
+      "status": "new",
+      "repetitions": 0,
+      "id": "14y90pxnY0Q"
+    },
+    {
+      "english": "tangible",
+      "translate": "матеріальний, реальний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "hiV7S_-7aJg"
+    },
+    {
+      "english": "summit",
+      "translate": "вершина",
+      "status": "new",
+      "repetitions": 0,
+      "id": "2GRQr2wZQfo"
+    },
+    {
+      "english": "committed",
+      "translate": "відданість",
+      "status": "new",
+      "repetitions": 1,
+      "id": "Vq1DJUYGRLw"
+    },
+    {
+      "english": "fluency",
+      "translate": "вільне володіння",
+      "status": "new",
+      "repetitions": 0,
+      "id": "1nmciQQ4RSY"
+    },
+    {
+      "english": "denser",
+      "translate": "густіший, щільніший",
+      "status": "new",
+      "repetitions": 2,
+      "id": "RuEVobnN8bs"
+    },
+    {
+      "english": "adversity",
+      "translate": "негаразди, труднощі",
+      "status": "new",
+      "repetitions": 0,
+      "id": "D99h-6j0vZI"
+    },
+    {
+      "english": "spotlight",
+      "translate": "центр уваги",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Wb0kO4w2oII"
+    },
+    {
+      "english": "constant",
+      "translate": "постійний",
+      "status": "new",
+      "repetitions": 1,
+      "id": "oG_yDMWQ0l8"
+    },
+    {
+      "english": "approval",
+      "translate": "затвердження",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Ck7IxQ2PQio"
+    },
+    {
+      "english": "exhaust",
+      "translate": "виснажити",
+      "status": "new",
+      "repetitions": 1,
+      "id": "7eHizulyfiM"
+    },
+    {
+      "english": "justify",
+      "translate": "виправдання, обгрунтування",
+      "status": "new",
+      "repetitions": 1,
+      "id": "wEjpZUW-SPE"
+    },
+    {
+      "english": "deserve",
+      "translate": "заслуговувати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "UhLTEvuQmE0"
+    },
+    {
+      "english": "intensity",
+      "translate": "інтенсивність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "-n59VVV2u84"
+    },
+    {
+      "english": "cue",
+      "translate": "сигнал, підказка",
+      "status": "new",
+      "repetitions": 0,
+      "id": "742B1zcUPnU"
+    },
+    {
+      "english": "proactive",
+      "translate": "проактивний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "xH32cQdHXfM"
+    },
+    {
+      "english": "vision",
+      "translate": "бачення, уявлення про майбутнє",
+      "status": "new",
+      "repetitions": 0,
+      "id": "LsU6Lnul3iQ"
+    },
+    {
+      "english": "humility",
+      "translate": "скромність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "vMxrE4xvnZk"
+    },
+    {
+      "english": "spread oneself too thin",
+      "translate": "брати на себе забагато",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Ha1eCNtZEqo"
+    },
+    {
+      "english": "willpower",
+      "translate": "сила волі",
+      "status": "new",
+      "repetitions": 0,
+      "id": "O1Ndny-pAeg"
+    },
+    {
+      "english": "ahead",
+      "translate": "попереду",
+      "status": "new",
+      "repetitions": 0,
+      "id": "HBT3ayLGQeQ"
+    },
+    {
+      "english": "starve",
+      "translate": "голодувати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "98aM9MoHTks"
+    },
+    {
+      "english": "embarrass",
+      "translate": "сором",
+      "status": "new",
+      "repetitions": 1,
+      "id": "J4jJVODFDqo"
+    },
+    {
+      "english": "passion",
+      "translate": "пристрасть",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Id2YxidJex4"
+    },
+    {
+      "english": "commute",
+      "translate": "поїздка з дому на роботу або назад",
+      "status": "new",
+      "repetitions": 0,
+      "id": "6E-13FjrDz4"
+    },
+    {
+      "english": "nightmare",
+      "translate": "нічний кошмар",
+      "status": "new",
+      "repetitions": 0,
+      "id": "9o4oRenpyYk"
+    },
+    {
+      "english": "sway",
+      "translate": "хитатись",
+      "status": "new",
+      "repetitions": 0,
+      "id": "u1td-YQ-wxo"
+    },
+    {
+      "english": "convenient",
+      "translate": "зручний, вигідний, комфортний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "6ux2uOggcZY"
+    },
+    {
+      "english": "crowded",
+      "translate": "переповнений людьми",
+      "status": "new",
+      "repetitions": 0,
+      "id": "EZCtW-3ZlwY"
+    },
+    {
+      "english": "symptom",
+      "translate": "симптом",
+      "status": "new",
+      "repetitions": 0,
+      "id": "lilllvzgAKI"
+    },
+    {
+      "english": "treatment",
+      "translate": "лікування",
+      "status": "new",
+      "repetitions": 1,
+      "id": "BcAIC7R82oI"
+    },
+    {
+      "english": "stressful",
+      "translate": "стресовий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "jf3zYapheco"
+    },
+    {
+      "english": "recovery",
+      "translate": "відновлення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "9vD3N-jOq3w"
+    },
+    {
+      "english": "appointment",
+      "translate": "запис, прийом",
+      "status": "new",
+      "repetitions": 0,
+      "id": "rLOkrBp5-mI"
+    },
+    {
+      "english": "for comparison",
+      "translate": "для порівняння",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zjhNcu8qG3U"
+    },
+    {
+      "english": "advantage",
+      "translate": "перевага",
+      "status": "new",
+      "repetitions": 0,
+      "id": "XrmwczCgAxY"
+    },
+    {
+      "english": "direction",
+      "translate": "напрямок, курс руху",
+      "status": "new",
+      "repetitions": 1,
+      "id": "spjvrbvlfRI"
+    },
+    {
+      "english": "lost a long time",
+      "translate": "бути довговічним, тривати довго",
+      "status": "new",
+      "repetitions": 1,
+      "id": "HmYTeK45rm4"
+    },
+    {
+      "english": "energy-efficient",
+      "translate": "енергоефективний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "L5MYAw-reOs"
+    },
+    {
+      "english": "in addition",
+      "translate": "крім того, додатково",
+      "status": "new",
+      "repetitions": 0,
+      "id": "8J4U9Rl_mFg"
+    },
+    {
+      "english": "stuck",
+      "translate": "застрягнути",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3Cp8DY6KW7E"
+    },
+    {
+      "english": "prevent",
+      "translate": "запобігати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "yPt9bjp8hzk"
+    },
+    {
+      "english": "sight",
+      "translate": "зір",
+      "status": "new",
+      "repetitions": 0,
+      "id": "tlwoQa7G5gY"
+    },
+    {
+      "english": "accident",
+      "translate": "аварія",
+      "status": "new",
+      "repetitions": 0,
+      "id": "uBG-pmTKtDE"
+    },
+    {
+      "english": "caught",
+      "translate": "пійманий",
+      "status": "new",
+      "repetitions": 0,
+      "id": "A4eDQ3XpRu4"
+    },
+    {
+      "english": "amount",
+      "translate": "кількість, сума",
+      "status": "new",
+      "repetitions": 0,
+      "id": "u2X_PjSo26s"
+    },
+    {
+      "english": "reduce",
+      "translate": "зменшувати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "pn6Lxy1rX0A"
+    },
+    {
+      "english": "whisper",
+      "translate": "шепіт",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zUt2faCPzf4"
+    },
+    {
+      "english": "hold back",
+      "translate": "стримувати через страх або сумніви",
+      "status": "new",
+      "repetitions": 0,
+      "id": "lBzM10XjM88"
+    },
+    {
+      "english": "struggle",
+      "translate": "важке зусилля",
+      "status": "new",
+      "repetitions": 0,
+      "id": "1aAXpApiGH8"
+    },
+    {
+      "english": "colleague",
+      "translate": "коллега",
+      "status": "new",
+      "repetitions": 0,
+      "id": "GgIdNB63ak0"
+    },
+    {
+      "english": "gratitude",
+      "translate": "вдячність",
+      "status": "new",
+      "repetitions": 0,
+      "id": "Ky1hG8R0i2U"
+    },
+    {
+      "english": "recognize",
+      "translate": "визнавати, впізнавати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "L0jjJysb5TU"
+    },
+    {
+      "english": "lift up",
+      "translate": "підіймати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "y-q56M-CZXg"
+    },
+    {
+      "english": "it depends",
+      "translate": "це залежить",
+      "status": "new",
+      "repetitions": 0,
+      "id": "ogfk8UYwM5E"
+    },
+    {
+      "english": "from scratch",
+      "translate": "з нуля, з чистого листа",
+      "status": "new",
+      "repetitions": 1,
+      "id": "Rc2SYV9glqk"
+    },
+    {
+      "english": "Actually",
+      "translate": "насправді",
+      "status": "new",
+      "repetitions": 1,
+      "id": "6-IEC4TTPgU"
+    },
+    {
+      "english": "In fact",
+      "translate": "фактично",
+      "status": "new",
+      "repetitions": 0,
+      "id": "o45jCyLI_5E"
+    },
+    {
+      "english": "at first",
+      "translate": "спочатку",
+      "status": "new",
+      "repetitions": 0,
+      "id": "YIfPFbXq51w"
+    },
+    {
+      "english": "eventually",
+      "translate": "зрештою",
+      "status": "new",
+      "repetitions": 0,
+      "id": "teMOu7_pOHs"
+    },
+    {
+      "english": "suddenly",
+      "translate": "раптово",
+      "status": "new",
+      "repetitions": 0,
+      "id": "FEr3dMlRxn0"
+    },
+    {
+      "english": "to be honest",
+      "translate": "чесно кажучи",
+      "status": "new",
+      "repetitions": 0,
+      "id": "kQtYByk9pFw"
+    },
+    {
+      "english": "in the future",
+      "translate": "в майбутньому",
+      "status": "new",
+      "repetitions": 0,
+      "id": "bLzl3QaPjag"
+    },
+    {
+      "english": "at the moment",
+      "translate": "на даний момент",
+      "status": "new",
+      "repetitions": 0,
+      "id": "wDG1YOKhLv0"
+    },
+    {
+      "english": "addiction",
+      "translate": "залежність",
+      "status": "new",
+      "repetitions": 1,
+      "id": "Z4ulrMsM180"
+    },
+    {
+      "english": "carve",
+      "translate": "вирізати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "EQ9SiBQ308k"
+    },
+    {
+      "english": "confesion",
+      "translate": "зізнання",
+      "status": "new",
+      "repetitions": 0,
+      "id": "LVMhBnxvw9M"
+    },
+    {
+      "english": "betraying",
+      "translate": "зрада",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3J6U23k4UVA"
+    },
+    {
+      "english": "miserable",
+      "translate": "нещасний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_CuHVN1rBRY"
+    },
+    {
+      "english": "resentment",
+      "translate": "образа",
+      "status": "new",
+      "repetitions": 0,
+      "id": "KuDmu2wxNec"
+    },
+    {
+      "english": "reevaluate",
+      "translate": "оцінити заново, переглянути",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_K6yXfE0LmY"
+    },
+    {
+      "english": "blunt",
+      "translate": "тупий",
+      "status": "new",
+      "repetitions": 1,
+      "id": "2ZVGqlC0RQY"
+    },
+    {
+      "english": "conviction",
+      "translate": "переконання",
+      "status": "new",
+      "repetitions": 0,
+      "id": "O7YKqTj6FKI"
+    },
+    {
+      "english": "realize",
+      "translate": "усвідомлювати, розуміти",
+      "status": "new",
+      "repetitions": 1,
+      "id": "qL1YWLTTDww"
+    },
+    {
+      "english": "yell",
+      "translate": "кричати від злості",
+      "status": "new",
+      "repetitions": 0,
+      "id": "K2u_MLoWjp4"
+    },
+    {
+      "english": "scream",
+      "translate": "кричати від страху",
+      "status": "new",
+      "repetitions": 0,
+      "id": "pHStEd7IgBI"
+    },
+    {
+      "english": "weird",
+      "translate": "дивний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "X2ycLCNTWNU"
+    },
+    {
+      "english": "gentle",
+      "translate": "ніжний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "moAltLeZ5-A"
+    },
+    {
+      "english": "adapt",
+      "translate": "адаптуватись",
+      "status": "new",
+      "repetitions": 0,
+      "id": "h-mCm2nENHc"
+    },
+    {
+      "english": "flaw",
+      "translate": "недостаток",
+      "status": "new",
+      "repetitions": 1,
+      "id": "5pLYUUnQ7Hk"
+    },
+    {
+      "english": "drown",
+      "translate": "тонути",
+      "status": "new",
+      "repetitions": 0,
+      "id": "gyYlTnmkUoI"
+    },
+    {
+      "english": "insecure",
+      "translate": "невпевнений",
+      "status": "new",
+      "repetitions": 1,
+      "id": "gyy1ll5CLuY"
+    },
+    {
+      "english": "second-guess",
+      "translate": "сумніватися",
+      "status": "new",
+      "repetitions": 1,
+      "id": "0Mgetusa3ao"
+    },
+    {
+      "english": "terrify",
+      "translate": "лякати",
+      "status": "new",
+      "repetitions": 0,
+      "id": "GcHZn2qPFTw"
+    },
+    {
+      "english": "validate",
+      "translate": "підтвердження",
+      "status": "new",
+      "repetitions": 0,
+      "id": "ttgsmbIP_Ro"
+    },
+    {
+      "english": "show up",
+      "translate": "з'являтись",
+      "status": "new",
+      "repetitions": 0,
+      "id": "dwYArQBNwlQ"
+    },
+    {
+      "english": "own",
+      "translate": "приймати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "e-Mfx7djVjU"
+    },
+    {
+      "english": "inception",
+      "translate": "започаткування",
+      "status": "new",
+      "repetitions": 0,
+      "id": "racqDRqyj6I"
+    },
+    {
+      "english": "fascinates",
+      "translate": "захоплює",
+      "status": "new",
+      "repetitions": 1,
+      "id": "sp1JuufoViE"
+    },
+    {
+      "english": "perspective",
+      "translate": "точка зору",
+      "status": "new",
+      "repetitions": 0,
+      "id": "0pqvli2pFlU"
+    },
+    {
+      "english": "coincidence",
+      "translate": "збіг",
+      "status": "new",
+      "repetitions": 0,
+      "id": "EjMmnuzIGt0"
+    },
+    {
+      "english": "assumption",
+      "translate": "припущення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "N-hzcEzWwVM"
+    },
+    {
+      "english": "influence",
+      "translate": "вплив",
+      "status": "new",
+      "repetitions": 0,
+      "id": "eE6T0wHvqPg"
+    },
+    {
+      "english": "mindset",
+      "translate": "спосіб мислення",
+      "status": "new",
+      "repetitions": 0,
+      "id": "qM6ZgTlamF8"
+    },
+    {
+      "english": "prioritize",
+      "translate": "визначати пріоритети",
+      "status": "new",
+      "repetitions": 0,
+      "id": "vshC6_uI0Xs"
+    },
+    {
+      "english": "overcome",
+      "translate": "долати",
+      "status": "new",
+      "repetitions": 1,
+      "id": "-GmhCK6Ji7I"
+    },
+    {
+      "english": "challenge",
+      "translate": "виклик",
+      "status": "new",
+      "repetitions": 0,
+      "id": "uovbuEAkeso"
+    },
+    {
+      "english": "achievement",
+      "translate": "досягнення",
+      "status": "new",
+      "repetitions": 1,
+      "id": "_HjG_ybFakA"
+    },
+    {
+      "english": "self-awareness",
+      "translate": "самосвідомість",
+      "status": "new",
+      "repetitions": 0,
+      "id": "61y3C9xBJ6w"
+    },
+    {
+      "english": "bizarre",
+      "translate": "дивний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "zQaG15v_pGA"
+    },
+    {
+      "english": "hilarious",
+      "translate": "дуже смішний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "hzZ_yhmP5A4"
+    },
+    {
+      "english": "ancient",
+      "translate": "стародавній",
+      "status": "new",
+      "repetitions": 0,
+      "id": "3vOgTmRj3LI"
+    },
+    {
+      "english": "ordinary",
+      "translate": "звичайний",
+      "status": "new",
+      "repetitions": 0,
+      "id": "E09IvkqKQ7A"
+    },
+    {
+      "english": "creature",
+      "translate": "істота",
+      "status": "new",
+      "repetitions": 0,
+      "id": "PWzNv9YcFyA"
+    },
+    {
+      "english": "phenomenon",
+      "translate": "явище",
+      "status": "new",
+      "repetitions": 0,
+      "id": "_3C-06wkI_Y"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -22,6 +22,7 @@
 // 11 - Звукові ефекти: Короткий приємний "дінь" при правильній відповіді та легка вібрація (якщо це мобільний) при помилці дуже сильно міняють відчуття від гри.
 
 // 12 - Адаптивність (Mobile First): Переконайся, що grid або flex для кнопок відповідей не з'їжджає, якщо переклад слова буде дуже довгим.
+import { capitalizeFirst } from '../services/services'
 import wordsStore from '../store/wordsStore'
 
 export default function initStudy() {
@@ -99,10 +100,9 @@ export default function initStudy() {
 			return
 		}
 
-		const shuffled = [...data]
-		shuffle(shuffled)
+		questions = getWeightedQuestions(data, count)
 
-		return (questions = shuffled.slice(0, count))
+		return questions
 	}
 
 	let isAnswered = false
@@ -138,7 +138,7 @@ export default function initStudy() {
 
 		parent.classList.add('is-answered')
 
-		if (selectedAnswer.textContent === questions[currentIndex].translate) {
+		if (selectedAnswer.dataset.answer === questions[currentIndex].translate) {
 			selectedAnswer.classList.add('correct')
 			correctAnswers++
 			await updateWordProgress(questions[currentIndex])
@@ -162,6 +162,49 @@ export default function initStudy() {
 		return 'new'
 	}
 
+	function getWordWeight(word) {
+		if (word.status === 'new') return 5
+		if (word.status === 'learning') return 3
+		if (word.status === 'learned') return 1
+
+		return 1
+	}
+
+	function createWeightedPool(words) {
+		const weightedPool = []
+
+		words.forEach(word => {
+			const weight = getWordWeight(word)
+
+			for (let i = 0; i < weight; i++) {
+				weightedPool.push(word)
+			}
+		})
+
+		return weightedPool
+	}
+
+	function getWeightedQuestions(words, count) {
+		const weightedPool = createWeightedPool(words)
+		shuffle(weightedPool)
+
+		const selectedQuestions = []
+		const selectedIds = new Set()
+
+		for (const word of weightedPool) {
+			if (selectedQuestions.length >= count) break
+
+			const id = String(word.id)
+
+			if (selectedIds.has(id)) continue
+
+			selectedQuestions.push(word)
+			selectedIds.add(id)
+		}
+
+		return selectedQuestions
+	}
+
 	async function updateWordProgress(currentWord) {
 		const words = wordsStore.getWords()
 		const actualWord = words.find(
@@ -173,7 +216,7 @@ export default function initStudy() {
 		const newRepetitions = oldRepetitions + 1
 		const newStatus = getStatusByRepetitions(newRepetitions)
 
-		wordsStore.updateWord(actualWord.id, {
+		await wordsStore.updateWord(actualWord.id, {
 			repetitions: newRepetitions,
 			status: newStatus,
 		})
@@ -183,7 +226,7 @@ export default function initStudy() {
 		if (questions.length === 0 || !questions[currentIndex]) return
 
 		const currentWord = questions[currentIndex]
-		let english = currentWord.english
+		let english = capitalizeFirst(currentWord.english)
 		const answers = generateAnswers(currentWord)
 
 		if (!answers || answers.length < 3) return
@@ -192,9 +235,9 @@ export default function initStudy() {
           <div class="study__mode">
 						<div class="study__mode-question text-lg card">${english}</div>
 						<ul class="study__mode-answers">
-						<li class='answer'><button class='answer-btn'>${answers[0]}</button></li>
-							<li class='answer'><button class='answer-btn'>${answers[1]}</button></li>
-							<li class='answer'><button class='answer-btn'>${answers[2]}</button></li>
+						<li class='answer'><button class='answer-btn' data-answer="${answers[0]}">${capitalizeFirst(answers[0])}</button></li>
+							<li class='answer'><button class='answer-btn' data-answer="${answers[1]}">${capitalizeFirst(answers[1])}</button></li>
+							<li class='answer'><button class='answer-btn' data-answer="${answers[2]}">${capitalizeFirst(answers[2])}</button></li>
 						</ul>
 					</div>`
 	}

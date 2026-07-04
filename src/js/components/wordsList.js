@@ -1,4 +1,4 @@
-import { lowerTrim } from '../services/services'
+import { capitalizeFirst, lowerTrim } from '../services/services'
 import { validateWordData } from '../services/wordValidation'
 import wordsStore from '../store/wordsStore'
 ///// Що доробити потрібно:
@@ -46,11 +46,8 @@ class WordsList {
 		const elem = document.createElement('li')
 		elem.classList.add('words__item')
 		elem.dataset.id = this.id
-		const eng =
-			this.english.charAt(0).toUpperCase() + this.english.slice(1).toLowerCase()
-		const ukr =
-			this.translate.charAt(0).toUpperCase() +
-			this.translate.slice(1).toLowerCase()
+		const eng = capitalizeFirst(this.english)
+		const ukr = capitalizeFirst(this.translate)
 		if (this.isEditing) {
 			elem.innerHTML = `
 		<div class="words__item-words">
@@ -68,7 +65,7 @@ class WordsList {
 		<button class="words__item-edit">${editIcon}</button>
 		<span class="text-md-bold">${eng}</span> / <span class="text-md opacity">${ukr}</span>
 		</div>
-		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
+		<div class="words__item-block"><div class="words__item-status words__item-status--${this.status}">${this.status}</div>
 		<button class="words__item-delete">${deleteIcon}</button></div>`
 		}
 

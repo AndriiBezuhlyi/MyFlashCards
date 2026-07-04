@@ -10,7 +10,7 @@
 	min-height: 0;
 	height: 100%;
 	@include respond(tablet) {
-		
+		height: 100%;
 	}
 	&__list {
 		display: flex;
@@ -33,6 +33,9 @@
 			&:hover {
 				background: var(--accent-mint-60);
 			}
+		}
+		@include respond(tablet) {
+			min-height: 0;
 		}
 	}
 	&__item {

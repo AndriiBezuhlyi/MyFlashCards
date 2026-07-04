@@ -1,17 +1,46 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .title {
 	&-sm {
 		font-weight: 600;
 		font-size: 20px;
+		@include respond-from(desktopL) {
+			font-size: 26px;
+		}
+		@include respond(tablet) {
+			font-size: 18px;
+		}
+		@include respond(mobile) {
+			font-size: 16px;
+		}
 	}
 	&-md {
 		font-weight: 600;
 		font-size: 30px;
+		@include respond-from(desktopL) {
+			font-size: 32px;
+		}
+		@include respond(tablet) {
+			font-size: 26px;
+		}
+
+		@include respond(mobile) {
+			font-size: 22px;
+		}
 	}
 	&-lg {
 		font-weight: 600;
 		font-size: 40px;
+		@include respond-from(desktopL) {
+			font-size: 44px;
+		}
+		@include respond(tablet) {
+			font-size: 34px;
+		}
+		@include respond(mobile) {
+			font-size: 28px;
+		}
 	}
 }
 
@@ -23,27 +52,64 @@
 	&-md {
 		font-weight: 400;
 		font-size: 18px;
+		@include respond(tablet) {
+			font-size: 16px;
+		}
 	}
 	&-md-bold {
-			font-weight: 600;
-			font-size: 18px;
+		font-weight: 600;
+		font-size: 18px;
+
+		@include respond(tablet) {
+			font-size: 16px;
 		}
+	}
 	&-lg {
 		font-weight: 400;
 		font-size: 24px;
+		@include respond(tablet) {
+			font-size: 21px;
+		}
+
+		@include respond(mobile) {
+			font-size: 18px;
+		}
 	}
 }
 
 .num {
 	&-sm {
 		font-size: 20px;
+		@include respond(tablet) {
+			font-size: 18px;
+		}
+
+		@include respond(mobile) {
+			font-size: 16px;
+		}
 	}
 	&-md {
 		font-weight: 600;
 		font-size: 24px;
+		@include respond(tablet) {
+			font-size: 21px;
+		}
+
+		@include respond(mobile) {
+			font-size: 18px;
+		}
 	}
 	&-lg {
 		font-size: 40px;
+		@include respond-from(desktopL) {
+			font-size: 44px;
+		}
+		@include respond(tablet) {
+			font-size: 34px;
+		}
+		@include respond(mobile) {
+			font-size: 28px;
+		}
 	}
 }
 

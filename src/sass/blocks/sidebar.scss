@@ -13,11 +13,23 @@
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
+	@include respond-from(desktopL) {
+		width: 320px;
+		padding: 36px 24px;
+		gap: 14px;
+	}
 	@include respond(tablet) {
 		width: 100%;
+		padding: 10px 5px;
 
-		flex-direction: row;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 8px;
+	}
+	@include respond(mobile) {
+		span {
+			display: none;
+		}
 	}
 
 	&__item {
@@ -41,6 +53,14 @@
 			width: 26px;
 			height: 26px;
 			stroke: currentColor;
+
+			@include respond-from(desktopL) {
+				padding: 16px 20px;
+			}
+			@include respond(tablet) {
+				width: 24px;
+				height: 24px;
+			}
 		}
 		&-active {
 			background: rgba(255, 255, 255, 0.12);
@@ -49,6 +69,12 @@
 			svg {
 				stroke: var(--accent-purple);
 			}
+		}
+		@include respond(tablet) {
+			justify-content: center;
+			padding: 12px;
+			gap: 8px;
+			min-width: 0;
 		}
 	}
 }

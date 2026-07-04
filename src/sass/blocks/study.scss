@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .study {
 	height: 100%;
@@ -26,6 +27,14 @@
 		justify-content: center;
 		align-items: center;
 		gap: 50px;
+		@include respond-from(desktopL) {
+			gap: 60px;
+		}
+		@include respond(tablet) {
+			height: 100%;
+			min-height: 0;
+			gap: 25px;
+		}
 		&-question {
 			display: flex;
 			align-items: center;
@@ -34,15 +43,23 @@
 
 			height: 275px;
 			width: 200px;
+			@include respond-from(desktopL) {
+				width: 240px;
+				height: 320px;
+			}
+			@include respond(tablet) {
+				height: 200px;
+				width: 180px;
+			}
 		}
 		&-answers {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			text-align: center;
-
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 12px;
 			width: 100%;
-			gap: 10px;
+			@include respond(mobile) {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
 	&__warning {

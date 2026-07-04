@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .button {
 	display: flex;
@@ -84,6 +85,19 @@
 		border-color 0.2s ease,
 		background 0.2s ease,
 		box-shadow 0.2s ease;
+
+	@include respond-from(desktopL) {
+		min-height: 140px;
+		padding: 22px;
+	}
+	@include respond(tablet) {
+		width: 100%;
+		min-height: 96px;
+		padding: 14px;
+	}
+	@include respond(mobile) {
+		min-height: 64px;
+	}
 }
 
 .study:not(.is-answered) .answer-btn:hover {

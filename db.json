@@ -88,7 +88,7 @@
       "english": "behavior ",
       "translate": "поведінка",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "_sI2GKVtKsg"
     },
     {
@@ -284,7 +284,7 @@
       "english": "gradual",
       "translate": "поступово",
       "status": "new",
-      "repetitions": 1,
+      "repetitions": 2,
       "id": "Q7WrKx28Fao"
     },
     {
@@ -305,7 +305,7 @@
       "english": "reclaim",
       "translate": "повернути щось",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "az1cEOirJMM"
     },
     {
@@ -347,7 +347,7 @@
       "english": "confuse",
       "translate": "заплутатись",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "jhN5IFO6YeU"
     },
     {
@@ -445,7 +445,7 @@
       "english": "weird",
       "translate": "дивний",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "-cNuHbhopck"
     },
     {
@@ -459,7 +459,7 @@
       "english": "excuse",
       "translate": "виправдання",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "t7XGxxjgE4s"
     },
     {
@@ -494,7 +494,7 @@
       "english": "confident",
       "translate": "впевнений",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "bEj64LpmXF4"
     },
     {
@@ -620,7 +620,7 @@
       "english": "mental traffic jam",
       "translate": "ментальний затор",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "E8newsmSnlE"
     },
     {
@@ -676,7 +676,7 @@
       "english": "persistance",
       "translate": "наполегливість",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "XRKykx-AyL4"
     },
     {
@@ -704,7 +704,7 @@
       "english": "complicate",
       "translate": "ускладнювати",
       "status": "new",
-      "repetitions": 1,
+      "repetitions": 2,
       "id": "DUahoFFt4WA"
     },
     {
@@ -816,7 +816,7 @@
       "english": "barefoot",
       "translate": "босоніж",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "3D7LIbfUCnA"
     },
     {
@@ -900,14 +900,14 @@
       "english": "exhaust",
       "translate": "виснажити",
       "status": "new",
-      "repetitions": 1,
+      "repetitions": 2,
       "id": "7eHizulyfiM"
     },
     {
       "english": "justify",
       "translate": "виправдання, обгрунтування",
       "status": "new",
-      "repetitions": 1,
+      "repetitions": 2,
       "id": "wEjpZUW-SPE"
     },
     {
@@ -1019,7 +1019,7 @@
       "english": "convenient",
       "translate": "зручний, вигідний, комфортний",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "6ux2uOggcZY"
     },
     {
@@ -1096,7 +1096,7 @@
       "english": "energy-efficient",
       "translate": "енергоефективний",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "L5MYAw-reOs"
     },
     {
@@ -1124,14 +1124,14 @@
       "english": "sight",
       "translate": "зір",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "tlwoQa7G5gY"
     },
     {
       "english": "accident",
       "translate": "аварія",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "uBG-pmTKtDE"
     },
     {
@@ -1187,7 +1187,7 @@
       "english": "gratitude",
       "translate": "вдячність",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "Ky1hG8R0i2U"
     },
     {
@@ -1348,7 +1348,7 @@
       "english": "yell",
       "translate": "кричати від злості",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "K2u_MLoWjp4"
     },
     {
@@ -1376,7 +1376,7 @@
       "english": "adapt",
       "translate": "адаптуватись",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "h-mCm2nENHc"
     },
     {
@@ -1418,7 +1418,7 @@
       "english": "validate",
       "translate": "підтвердження",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 1,
       "id": "ttgsmbIP_Ro"
     },
     {
@@ -1509,7 +1509,7 @@
       "english": "achievement",
       "translate": "досягнення",
       "status": "new",
-      "repetitions": 1,
+      "repetitions": 2,
       "id": "_HjG_ybFakA"
     },
     {
@@ -1558,7 +1558,7 @@
       "english": "phenomenon",
       "translate": "явище",
       "status": "new",
-      "repetitions": 0,
+      "repetitions": 2,
       "id": "_3C-06wkI_Y"
     }
   ],

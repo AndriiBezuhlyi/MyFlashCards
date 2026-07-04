@@ -6,7 +6,7 @@
 		font-weight: 600;
 		font-size: 20px;
 		@include respond-from(desktopL) {
-			font-size: 26px;
+			font-size: 22px;
 		}
 		@include respond(tablet) {
 			font-size: 18px;

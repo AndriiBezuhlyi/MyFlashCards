@@ -2,13 +2,20 @@
 @use '../base/mixins' as *;
 
 .words {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+
 	position: relative;
-
 	display: flex;
+	flex-direction: column;
 	gap: 20px;
-
 	min-height: 0;
 	height: 100%;
+	@include respond-from(desktopL) {
+		max-width: 1060px;
+		gap: 24px;
+	}
 	@include respond(tablet) {
 		height: 100%;
 	}
@@ -17,6 +24,7 @@
 		flex-direction: column;
 		gap: 20px;
 		flex: 1;
+		min-height: 0;
 		overflow-y: auto;
 
 		padding: 20px 10px;
@@ -34,43 +42,80 @@
 				background: var(--accent-mint-60);
 			}
 		}
+		@include respond-from(desktopL) {
+			padding: 24px 14px;
+			gap: 22px;
+		}
 		@include respond(tablet) {
 			min-height: 0;
 		}
 	}
 	&__item {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
 		align-items: center;
+		gap: 16px;
+
 		padding: 0 10px 20px;
 		border-bottom: 2px solid var(--accent-mint-30);
-		width: 100%;
+
+		@include respond-from(desktopL) {
+			padding: 0 14px 22px;
+		}
+
 		&-words {
+			min-width: 0;
+			width: 100%;
+
 			display: flex;
-			flex-wrap: wrap;
+			align-items: center;
 			gap: 10px;
 		}
+
+		&-content {
+			min-width: 0;
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		&-english,
+		&-translate {
+			min-width: 0;
+			overflow-wrap: break-word;
+			word-break: normal;
+		}
+
 		&-block {
 			display: flex;
+			align-items: center;
 			gap: 15px;
+			flex-shrink: 0;
 		}
+
 		&-status {
 			padding: 5px 10px;
 			color: var(--bg-panel);
 			border-radius: 5px;
+			white-space: nowrap;
+
 			&--new {
 				background-color: var(--status-new-bg);
 				color: var(--status-new-text);
 			}
+
 			&--learning {
 				background-color: var(--status-learning-bg);
 				color: var(--status-learning-text);
 			}
+
 			&--learned {
 				background-color: var(--status-learned-bg);
 				color: var(--status-learned-text);
 			}
 		}
+
 		&-delete,
 		&-edit,
 		&-save,
@@ -78,30 +123,38 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex-shrink: 0;
 
 			padding: 0;
 
 			background-color: transparent;
 			border: none;
-			color: none;
 
 			cursor: pointer;
 			transition: 0.2s;
+
 			&:hover {
 				opacity: 0.7;
 				transform: scale(1.1);
 			}
 		}
+
 		&-slash {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-shrink: 0;
 		}
+
 		&-wrap {
+			min-width: 0;
+
 			display: flex;
 			flex-direction: column;
 		}
+
 		&-input {
+			width: 100%;
 			max-width: 170px;
 			padding: 4px 6px;
 
@@ -126,8 +179,76 @@
 			&::selection {
 				background-color: rgba(120, 165, 150, 0.35);
 			}
+
 			&--translate {
 				color: var(--text-secondary);
+			}
+		}
+
+		@include respond(mobileS) {
+			grid-template-columns: minmax(0, 1fr) auto;
+			align-items: flex-start;
+			gap: 12px;
+
+			padding: 0 8px 18px;
+
+			&-words {
+				display: grid;
+				grid-template-columns: 26px minmax(0, 1fr);
+				grid-template-areas: 'edit content';
+				align-items: flex-start;
+				column-gap: 10px;
+			}
+
+			&-edit {
+				grid-area: edit;
+				margin-top: 2px;
+			}
+
+			&-content {
+				grid-area: content;
+
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 4px;
+			}
+
+			&-slash {
+				display: none;
+			}
+
+			&-block {
+				flex-direction: column;
+				align-items: flex-end;
+				gap: 10px;
+			}
+
+			&-words--editing {
+				grid-template-columns: 26px 26px minmax(0, 1fr);
+				grid-template-areas:
+					'save cancel english'
+					'. . translate';
+				row-gap: 10px;
+			}
+
+			&-save {
+				grid-area: save;
+			}
+
+			&-cancel {
+				grid-area: cancel;
+			}
+
+			&-wrap--english {
+				grid-area: english;
+			}
+
+			&-wrap--translate {
+				grid-area: translate;
+			}
+
+			&-input {
+				max-width: none;
 			}
 		}
 	}

@@ -45,6 +45,10 @@
 			background 0.25s ease,
 			color 0.25s ease,
 			border-color 0.25s ease;
+		@include respond-from(desktopL) {
+			padding: 16px 20px;
+			gap: 16px;
+		}
 		&:hover {
 			background: rgba(255, 255, 255, 0.03);
 			color: var(--text-primary);
@@ -53,10 +57,6 @@
 			width: 26px;
 			height: 26px;
 			stroke: currentColor;
-
-			@include respond-from(desktopL) {
-				padding: 16px 20px;
-			}
 			@include respond(tablet) {
 				width: 24px;
 				height: 24px;

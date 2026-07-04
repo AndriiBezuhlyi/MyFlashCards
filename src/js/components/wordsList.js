@@ -50,23 +50,49 @@ class WordsList {
 		const ukr = capitalizeFirst(this.translate)
 		if (this.isEditing) {
 			elem.innerHTML = `
-		<div class="words__item-words">
-		<button class="words__item-save">${saveIcon}</button>
-		<button class="words__item-cancel">${cancelIcon}</button>
-		<div class="words__item-wrap"> <span class="words__item-error">${this.editErrors.english}</span>
-		<input class="words__item-input words__item-input--english text-md-bold" value="${this.editValues.english}"></div> <span class="words__item-slash text-md-bold">/</span> <div class="words__item-wrap"><span class="words__item-error">${this.editErrors.translate}</span>
-		<input class="words__item-input words__item-input--translate text-md opacity" value="${this.editValues.translate}"></div>
+		<div class="words__item-words words__item-words--editing">
+			<button class="words__item-save">${saveIcon}</button>
+			<button class="words__item-cancel">${cancelIcon}</button>
+
+			<div class="words__item-wrap words__item-wrap--english">
+				<span class="words__item-error">${this.editErrors.english}</span>
+				<input class="words__item-input words__item-input--english text-md-bold" value="${this.editValues.english}">
+			</div>
+
+			<span class="words__item-slash text-md-bold">/</span>
+
+			<div class="words__item-wrap words__item-wrap--translate">
+				<span class="words__item-error">${this.editErrors.translate}</span>
+				<input class="words__item-input words__item-input--translate text-md opacity" value="${this.editValues.translate}">
+			</div>
 		</div>
-		<div class="words__item-block"><div class="words__item-status">${this.status}</div>
-		<button class="words__item-delete">${deleteIcon}</button></div>`
+
+		<div class="words__item-block">
+			<div class="words__item-status words__item-status--${this.status}">
+				${this.status}
+			</div>
+			<button class="words__item-delete">${deleteIcon}</button>
+		</div>
+	`
 		} else {
 			elem.innerHTML = `
 		<div class="words__item-words">
-		<button class="words__item-edit">${editIcon}</button>
-		<span class="text-md-bold">${eng}</span> / <span class="text-md opacity">${ukr}</span>
+			<button class="words__item-edit">${editIcon}</button>
+
+			<div class="words__item-content">
+				<span class="words__item-english text-md-bold">${eng}</span>
+				<span class="words__item-slash text-md-bold">/</span>
+				<span class="words__item-translate text-md opacity">${ukr}</span>
+			</div>
 		</div>
-		<div class="words__item-block"><div class="words__item-status words__item-status--${this.status}">${this.status}</div>
-		<button class="words__item-delete">${deleteIcon}</button></div>`
+
+		<div class="words__item-block">
+			<div class="words__item-status words__item-status--${this.status}">
+				${this.status}
+			</div>
+			<button class="words__item-delete">${deleteIcon}</button>
+		</div>
+	`
 		}
 
 		return elem

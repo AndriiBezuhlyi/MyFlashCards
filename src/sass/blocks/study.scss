@@ -28,6 +28,7 @@
 		align-items: center;
 		gap: 50px;
 		@include respond-from(desktopL) {
+			max-width: 1040px;
 			gap: 60px;
 		}
 		@include respond(tablet) {
@@ -53,10 +54,17 @@
 			}
 		}
 		&-answers {
+			width: 100%;
+			max-width: 940px;
+			margin: 0 auto;
+
 			display: grid;
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 			gap: 12px;
-			width: 100%;
+			@include respond-from(desktopL) {
+				max-width: 1040px;
+				gap: 16px;
+			}
 			@include respond(mobile) {
 				grid-template-columns: 1fr;
 			}

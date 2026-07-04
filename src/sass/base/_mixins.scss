@@ -5,7 +5,7 @@ $breakpoints: (
 	desktopL: 1640px,
 	tablet: 1024px,
 	mobile: 815px,
-	mobileS: 425px,
+	mobileS: 600px,
 );
 
 @mixin respond($breakpoint) {

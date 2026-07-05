@@ -1,11 +1,7 @@
 import { capitalizeFirst, lowerTrim } from '../services/services'
 import { validateWordData } from '../services/wordValidation'
 import wordsStore from '../store/wordsStore'
-///// Що доробити потрібно:
-// - фільтри по статусу,
-// - можливість вибирати багато слів для видалення,
-// - можливість редагувати слова,
-// - адаптувати занадто довгі слова та їх значення під список щоб не ламалось нічого
+
 class WordsList {
 	constructor(
 		{ id, english, translate, status },

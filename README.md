@@ -5,13 +5,14 @@
 The app helps users create, manage and study English words with translations using a simple learning progress system and weighted study mode.
 
 ## Preview
-  ### Words List
 
-  ![Words List Preview](/public/img/preview.png)
+### Words List
 
-  ### Study Mode
+![Words List Preview](/public/img/preview.png)
 
-  ![Study Mode Preview](public/img/preview-study.png)
+### Study Mode
+
+![Study Mode Preview](public/img/preview-study.png)
 
 ## Overview
 

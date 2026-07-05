@@ -67,9 +67,9 @@
 	align-items: center;
 	justify-content: center;
 
+	width: 100%;
+	height: 120px;
 	padding: 18px;
-	width: 180px;
-	min-height: 120px;
 
 	background: rgba(255, 255, 255, 0.03);
 	border: 1px solid rgba(255, 255, 255, 0.06);
@@ -87,16 +87,17 @@
 		box-shadow 0.2s ease;
 
 	@include respond-from(desktopL) {
-		min-height: 140px;
+		height: 130px;
 		padding: 22px;
 	}
+
 	@include respond(tablet) {
-		width: 100%;
-		min-height: 96px;
+		height: 96px;
 		padding: 14px;
 	}
+
 	@include respond(mobile) {
-		min-height: 64px;
+		height: 64px;
 	}
 }
 

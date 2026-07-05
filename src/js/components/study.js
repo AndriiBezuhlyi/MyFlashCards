@@ -145,7 +145,7 @@ export default function initStudy() {
 			setTimeout(updateQuestion, 2500)
 		} else {
 			answersList.forEach(item => {
-				if (item.textContent.trim() === questions[currentIndex].translate) {
+				if (item.dataset.answer === questions[currentIndex].translate) {
 					item.classList.add('correct')
 				}
 			})

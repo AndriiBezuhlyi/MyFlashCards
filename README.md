@@ -7,11 +7,11 @@ The app helps users create, manage and study English words with translations usi
 ## Preview
   ### Words List
 
-  ![Words List Preview](./public/img/preview-words.png)
+  ![Words List Preview](/public/img/preview.png)
 
   ### Study Mode
 
-  ![Study Mode Preview](./public/img/preview-study.png)
+  ![Study Mode Preview](public/img/preview-study.png)
 
 ## Overview
 

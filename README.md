@@ -313,6 +313,16 @@ Possible future improvements:
 - add animations for study mode
 - add progress history
 
+## Development Notes
+
+This project was built solo, written line by line without relying on AI to
+generate ready-made code. I used Claude/ChatGPT as a mentor throughout development —
+mainly to sanity-check architectural decisions (e.g. whether a custom
+pub-sub store made sense for a vanilla JS app of this size) and to get
+explanations for concepts I hadn't used before, like why `subscribe` should
+return an `unsubscribe` function. All implementation choices, bugs, and
+trade-offs in this codebase are my own.
+
 ## Author
 
 Created by **Andrii Bezuhlyi**

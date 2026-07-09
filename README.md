@@ -302,16 +302,20 @@ During this project, I practiced:
 
 Possible future improvements:
 
+- add an answer timer in Study Mode
+- add sound effects for correct and wrong answers
+- add a reverse Study Mode where users see a Ukrainian translation and choose the correct English word
+- add a new input-based Study Mode
 - add filtering by word status
-- add bulk delete
 - add sorting
-- add import/export words
+- add bulk delete
+- add import/export for words
 - add real spaced repetition with `lastReviewedAt` and `nextReviewAt`
+- add progress history and learning analytics
+- add animations for Study Mode
+- add tests
 - add user accounts
 - replace JSON Server with a real backend
-- add tests
-- add animations for study mode
-- add progress history
 
 ## Development Notes
 

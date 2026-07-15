@@ -2,7 +2,7 @@ import { lowerTrim } from './services'
 
 export function validateWordData(data) {
 	const engReg = /^[a-zA-Z'\s-]+$/,
-		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ,`''"\s-]+$/
+		ukrReg = /^[а-яА-ЯґҐєЄіІїЇ,\s-]+$/
 
 	const minLength = 2,
 		maxLength = 40

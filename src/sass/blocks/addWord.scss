@@ -10,6 +10,9 @@
 	justify-content: center;
 
 	overflow-y: auto;
+	@include respond(mobile) {
+		padding: 10px;
+	}
 	&__inner {
 		width: min(100%, 680px);
 
@@ -21,6 +24,9 @@
 		@include respond-from(desktopL) {
 			width: min(100%, 720px);
 			gap: 28px;
+		}
+		@include respond(mobile) {
+			gap: 10px;
 		}
 	}
 	&__head,
@@ -41,6 +47,12 @@
 		@include respond-from(desktopL) {
 			gap: 40px;
 		}
+		@include respond(mobile) {
+			gap: 20px;
+		}
+		@include respond(mobileS) {
+			gap: 5px;
+		}
 	}
 	&__wrap-input {
 		width: 100%;
@@ -49,6 +61,10 @@
 		gap: 20px;
 		@include respond(mobile) {
 			grid-template-columns: 1fr;
+			gap: 10px;
+		}
+		@include respond(mobileS) {
+			gap: 5px;
 		}
 	}
 	&__block {

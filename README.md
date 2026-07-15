@@ -1,185 +1,101 @@
 # MyFlashCards
 
-**MyFlashCards** is a responsive flashcard learning app built with Vanilla JavaScript, Vite, SCSS and JSON Server.
+MyFlashCards is a responsive English vocabulary learning application built with Vanilla JavaScript, SCSS, Vite and JSON Server.
 
-The app helps users create, manage and study English words with translations using a simple learning progress system and weighted study mode.
+The application allows users to create and manage vocabulary, track learning progress and practise words through a weighted study mode.
 
 ## Preview
 
-### Words List
+### Words Management
 
-![Words List Preview](/public/img/preview.png)
+![MyFlashCards words list](./public/img/preview.png)
 
 ### Study Mode
 
-![Study Mode Preview](public/img/preview-study.png)
+![MyFlashCards study mode](./public/img/preview-study.png)
 
-## Overview
+## Main Features
 
-MyFlashCards is a full-featured frontend application created without frameworks.
-
-The project includes real app logic: CRUD operations, form validation, state management, dashboard statistics, study mode, word progress tracking, responsive layout and theme switching.
-
-The main goal of this project is to demonstrate clean Vanilla JavaScript architecture, modular code organization and practical UI/UX decisions.
-
-## Features
-
-- Add new English words with translations
-- Edit existing words
-- Delete words with confirmation modal
-- Search words in real time
-- Validate form inputs
-- Track word learning status:
-  - `new`
-  - `learning`
-  - `learned`
-- Automatically update repetitions after correct answers
-- Automatically change word status based on repetitions
-- Study mode with multiple-choice answers
-- Weighted word selection:
-  - new words appear more often
-  - learning words appear moderately often
-  - learned words appear rarely
-- Dashboard with live statistics
-- Light and dark themes
-- Responsive layout for desktop, tablet and mobile
-- JSON Server API imitation
-- Modular JavaScript structure
-- SCSS architecture with variables, mixins and reusable UI styles
+* Create, edit and delete vocabulary cards
+* Search words in real time
+* Validate English and Ukrainian input
+* Track word status and repetition count
+* Automatically update learning progress
+* Practise words in multiple-choice study mode
+* Prioritize difficult and recently added words
+* Display live learning statistics
+* Switch between light and dark themes
+* Use the application on desktop, tablet and mobile devices
 
 ## Tech Stack
 
-- HTML5
-- SCSS
-- Vanilla JavaScript
-- Vite
-- JSON Server
-- Git / GitHub
+* HTML5
+* SCSS
+* Vanilla JavaScript ES6+
+* Vite
+* JSON Server
+* REST API
+* Git and GitHub
 
 ## Architecture
 
-The project is built with a modular structure.
+The project follows a modular structure that separates user interface logic, application state and API communication.
 
-The app uses a custom store for words management. Components subscribe to the store and re-render when the data changes.
+### Main modules
 
-Main parts of the architecture:
+* `wordsApi` — communicates with the JSON Server REST API
+* `wordsStore` — stores vocabulary data and notifies subscribed components
+* `wordValidation` — validates and normalizes form data
+* `initWordsList` — renders vocabulary and handles editing, deletion and search
+* `initForm` — handles the creation of new vocabulary cards
+* `initStudy` — controls study questions and learning progress
+* `initDashboard` — calculates and displays statistics
+* `initSettings` — manages theme preferences
 
-- `wordsApi` — handles API requests
-- `wordsStore` — keeps app state and notifies subscribers
-- `wordValidation` — validates word data
-- `services` — contains reusable helper functions
-- `initWordsList` — renders and manages the words list
-- `initForm` — handles adding new words
-- `initStudy` — handles study mode and progress logic
-- `initDashboard` — renders live statistics
-- `initSettings` — manages theme switching
+## State Management
 
-This structure keeps the code easier to read, maintain and extend.
+The application uses a custom store based on the publish–subscribe pattern.
 
-## Project Structure
+Components subscribe to the store and automatically receive updated vocabulary data after API operations. Each subscription returns an `unsubscribe` function to prevent unnecessary listeners.
 
-```txt
-MyFlashCards/
-├── db.json
-├── index.html
-├── package.json
-├── vite.config.js
-└── src/
-    ├── js/
-    │   ├── components/
-    │   │   ├── addWord.js
-    │   │   ├── dashboard.js
-    │   │   ├── settings.js
-    │   │   ├── study.js
-    │   │   ├── tabs.js
-    │   │   └── wordsList.js
-    │   ├── services/
-    │   │   ├── services.js
-    │   │   ├── wordValidation.js
-    │   │   └── wordsApi.js
-    │   ├── store/
-    │   │   └── wordsStore.js
-    │   └── main.js
-    └── sass/
-        ├── base/
-        ├── blocks/
-        ├── ui/
-        └── main.scss
+This approach separates data management from rendering logic without using a frontend framework.
+
+## Learning Progress
+
+Each vocabulary card contains a `repetitions` value and a learning `status`.
+
+```text
+0–4 repetitions   → new
+5–14 repetitions  → learning
+15+ repetitions   → learned
 ```
 
-## Word Progress Logic
-
-Each word has a `repetitions` field and a `status`.
-
-When the user answers correctly in Study Mode, the word receives `+1` repetition.
-
-The status changes automatically:
-
-```txt
-0–4 repetitions      → new
-5–14 repetitions     → learning
-15+ repetitions      → learned
-```
+After a correct answer, the repetition count is increased and the word status is recalculated automatically.
 
 ## Weighted Study Mode
 
-Study Mode uses weighted random selection.
+Study Mode uses weighted random selection:
 
-Words are selected based on their learning status:
-
-```txt
-new      → high priority
-learning → medium priority
-learned  → low priority
+```text
+new       → high priority
+learning  → medium priority
+learned   → low priority
 ```
 
-This means that new words appear more often, while already learned words appear less frequently.
-
-Example priority logic:
-
-```js
-function getWordWeight(word) {
-	if (word.status === 'new') return 5
-	if (word.status === 'learning') return 3
-	if (word.status === 'learned') return 1
-
-	return 1
-}
-```
-
-This creates a simple learning experience similar to a basic spaced repetition system.
+New and less-practised words appear more often, while learned words appear less frequently.
 
 ## Validation
 
-The app validates both English and Ukrainian inputs.
+The application validates both English words and Ukrainian translations.
 
 Validation includes:
 
-- required fields
-- minimum length
-- maximum length
-- English-only validation for English words
-- Ukrainian-only validation for translations
-- reusable validation result object with:
-  - `isValid`
-  - `values`
-  - `errors`
-
-Example validation result:
-
-```js
-{
-	isValid: true,
-	values: {
-		english: 'apple',
-		translate: 'яблуко'
-	},
-	errors: {
-		english: '',
-		translate: ''
-	}
-}
-```
+* Required fields
+* Minimum and maximum length
+* English character validation
+* Ukrainian character validation
+* Input normalization
+* Field-specific error messages
 
 ## Getting Started
 
@@ -189,7 +105,7 @@ Example validation result:
 git clone https://github.com/AndriiBezuhlyi/MyFlashCards.git
 ```
 
-### 2. Go to the project folder
+### 2. Open the project directory
 
 ```bash
 cd MyFlashCards
@@ -207,128 +123,75 @@ npm install
 npm run server
 ```
 
+The API will be available at:
+
+```text
+http://localhost:3000
+```
+
 ### 5. Start the development server
 
-Open a second terminal and run:
+Open another terminal and run:
 
 ```bash
 npm run dev
 ```
 
-The app will be available at:
+The application will normally be available at:
 
-```txt
+```text
 http://localhost:5173
 ```
 
 ## Available Scripts
 
-### Start Vite development server
-
 ```bash
 npm run dev
 ```
 
-### Start JSON Server
+Starts the Vite development server.
 
 ```bash
 npm run server
 ```
 
-### Build the project
+Starts JSON Server on port 3000.
 
 ```bash
 npm run build
 ```
 
-### Preview production build locally
+Creates a production build.
 
 ```bash
 npm run preview
 ```
 
-## Example API Data
+Runs the production build locally.
 
-The app uses `db.json` as a mock database.
+## What I Practised
 
-Example word object:
+* Creating a CRUD application with Vanilla JavaScript
+* Working with asynchronous REST API requests
+* Building a custom state store
+* Applying the publish–subscribe pattern
+* Separating UI, state and API logic
+* Creating reusable form validation
+* Rendering dynamic interface components
+* Managing loading, editing and deletion states
+* Building responsive layouts
+* Organizing SCSS into reusable modules
+* Using Git and GitHub throughout development
 
-```json
-{
-	"id": 1,
-	"english": "chase",
-	"translate": "гнатися",
-	"status": "new",
-	"repetitions": 0
-}
-```
+## Planned Improvements
 
-## Responsive Design
-
-The app is adapted for:
-
-- desktop screens
-- laptops
-- tablets
-- mobile devices
-
-Layout behavior:
-
-- desktop: sidebar navigation + main content
-- tablet/mobile: compact navigation
-- words list becomes scrollable inside the content area
-- study answers adapt from grid layout to a single-column layout on mobile
-- large screens have optimized container width and spacing
-
-## What I Learned
-
-During this project, I practiced:
-
-- building a real CRUD application with Vanilla JavaScript
-- working with a mock REST API
-- creating a custom store with subscriptions
-- separating UI logic from data logic
-- building reusable validation logic
-- rendering dynamic components
-- handling edit states
-- working with async API requests
-- building responsive layouts
-- organizing SCSS files
-- using CSS variables for themes
-- improving UI/UX for different screen sizes
-- using Git and GitHub workflow
-
-## Future Improvements
-
-Possible future improvements:
-
-- add an answer timer in Study Mode
-- add sound effects for correct and wrong answers
-- add a reverse Study Mode where users see a Ukrainian translation and choose the correct English word
-- add a new input-based Study Mode
-- add filtering by word status
-- add sorting
-- add bulk delete
-- add import/export for words
-- add real spaced repetition with `lastReviewedAt` and `nextReviewAt`
-- add progress history and learning analytics
-- add animations for Study Mode
-- add tests
-- add user accounts
-- replace JSON Server with a real backend
-
-## Development Notes
-
-This project was built solo, written line by line without relying on AI to
-generate ready-made code. I used Claude/ChatGPT as a mentor throughout development —
-mainly to sanity-check architectural decisions (e.g. whether a custom
-pub-sub store made sense for a vanilla JS app of this size) and to get
-explanations for concepts I hadn't used before, like why `subscribe` should
-return an `unsubscribe` function. All implementation choices, bugs, and
-trade-offs in this codebase are my own.
+* Deploy a publicly accessible live version
+* Add automated tests
+* Add word sorting and filtering
+* Add import and export functionality
+* Add reverse and text-input study modes
+* Implement review dates and a spaced-repetition algorithm
 
 ## Author
 
-Created by **Andrii Bezuhlyi**
-
-GitHub: [AndriiBezuhlyi](https://github.com/AndriiBezuhlyi)
+Created by [Andrii Bezuhlyi](https://github.com/AndriiBezuhlyi).
